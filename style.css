@@ -1,0 +1,55 @@
+/* general styles */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* container */
+.container{
+    background-color: lime;
+    width: 80%;
+    height: 90%;
+    display: grid;
+    grid-template-rows: 2fr 4fr;
+    border-radius: 15px;
+}
+
+/* main text block */
+.text_block{
+    background-image: linear-gradient(#0affff, #0e65ed);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title, .subtitle{
+    text-align: center;
+    color: #fff;
+}
+
+.title{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 45px;
+    letter-spacing: 3px;
+}
+
+.subtitle{
+    font-weight: 300;
+    font-size: 15px
+}
+
+/* section form */
+
