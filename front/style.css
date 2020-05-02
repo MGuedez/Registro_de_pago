@@ -1,3 +1,18 @@
+:root{
+    --main-block-color: linear-gradient(#0affff, #0e65ed);
+    --color-block-form: #fff;
+    --main-text-color: #fff;
+    --color-text-form: #2e2b32;
+    --button-color: linear-gradient(#0affff, #0e65ed);
+
+    --main-title-size: 3em;
+    --secondary-text-size: 1em;
+    --text-weight:300;
+    --font-title:'Fjalla One', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
+    --border-radius-container: 1em;
+}
+
 /* general styles */
 *{
     margin: 0;
@@ -11,44 +26,41 @@ body{
     display: flex;
     justify-content: center;
     align-items: center; 
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-text);
+    font-size: var(--secondary-text-size);
+    font-weight: var(--text-weight);
+    color: var(--color-text-form);
 }
 
 /* container */
 .container{
-    background-color: lime;
     width: 80%;
     height: 90%;
     display: grid;
     grid-template-rows: 2fr 4fr;
-    border-radius: 15px;
+    border-radius: var(--border-radius-container);
+    background-color: var(--color-block-form);
 }
 
 /* main text block */
 .text_block{
-    background-image: linear-gradient(#0affff, #0e65ed);
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: var(--border-radius-container);
+    background-image: var(--main-block-color);
 }
 
 .title, .subtitle{
     text-align: center;
-    color: #fff;
+    color: var(--main-text-color);
 }
 
 .title{
     font-family: 'Fjalla One', sans-serif;
-    font-size: 45px;
+    font-size: 3em;
     letter-spacing: 3px;
-}
-
-.subtitle{
-    font-weight: 300;
-    font-size: 15px
 }
 
 /* section form */
