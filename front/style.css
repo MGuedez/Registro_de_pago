@@ -6,7 +6,7 @@
     --button-color: linear-gradient(#0affff, #0e65ed);
 
     --main-title-size: 3em;
-    --secondary-text-size: 1em;
+    --secondary-text-size: 13px;
     --text-weight:300;
     --font-title:'Fjalla One', sans-serif;
     --font-text: 'Open Sans', sans-serif;
@@ -37,7 +37,7 @@ body{
     width: 80%;
     height: 90%;
     display: grid;
-    grid-template-rows: 2fr 4fr;
+    grid-template-rows: 3fr 2fr;
     border-radius: var(--border-radius-container);
     background-color: var(--color-block-form);
 }
@@ -48,7 +48,9 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: var(--border-radius-container);
+    margin-bottom: 20px;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
     background-image: var(--main-block-color);
 }
 
@@ -70,12 +72,6 @@ body{
     flex-wrap: wrap;
 }
 
-.title_form{
-    padding-top: 1em;
-    padding-bottom: 1em;
-    font-size: var(--secondary-text-size);
-}
-
 .form_box{
     width: 100%;
     height: 30px;
@@ -84,5 +80,15 @@ body{
 }
 
 .label{
-    margin-bottom: 15px;
+    margin-bottom: 13px;
+}
+
+.button_form{
+    width: 115px;
+    height: 35px;
+    margin: 12px auto 0;
+    border: none;
+    border-radius: 20px;
+    background-image: var(--button-color);
+    color: var(--main-text-color);
 }
