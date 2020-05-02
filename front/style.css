@@ -1,16 +1,15 @@
 :root{
-    --main-block-color: linear-gradient(#0affff, #0e65ed);
+    --main-block-color: linear-gradient(#B06AB3, #4568DC);
     --color-block-form: #fff;
-    --main-text-color: #fff;
     --color-text-form: #2e2b32;
-    --button-color: linear-gradient(#0affff, #0e65ed);
+    --button-color: #4568DC;
+    --color-text-button: #fff;
 
     --main-title-size: 3em;
     --secondary-text-size: 13px;
     --text-weight:300;
     --font-title:'Fjalla One', sans-serif;
     --font-text: 'Open Sans', sans-serif;
-    --border-radius-container: 1em;
 }
 
 /* general styles */
@@ -30,6 +29,7 @@ body{
     font-size: var(--secondary-text-size);
     font-weight: var(--text-weight);
     color: var(--color-text-form);
+    background-image: var(--main-block-color);
 }
 
 /* container */
@@ -37,26 +37,15 @@ body{
     width: 80%;
     height: 90%;
     display: grid;
-    grid-template-rows: 3fr 2fr;
-    border-radius: var(--border-radius-container);
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 1fr, 2fr;
     background-color: var(--color-block-form);
 }
 
 /* main text block */
-.text_block{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
-    background-image: var(--main-block-color);
-}
-
 .title, .subtitle{
     text-align: center;
-    color: var(--main-text-color);
+    color: var(--color-text-form);
 }
 
 .title{
@@ -73,7 +62,7 @@ body{
 }
 
 .form_box{
-    width: 100%;
+    width: 95%;
     height: 30px;
     border-width: .8px;
     border-color: transparent transparent #d2d6cf;
@@ -81,6 +70,7 @@ body{
 
 .label{
     margin-bottom: 13px;
+    padding-left: 1em;
 }
 
 .button_form{
@@ -89,6 +79,6 @@ body{
     margin: 12px auto 0;
     border: none;
     border-radius: 20px;
-    background-image: var(--button-color);
-    color: var(--main-text-color);
+    background-color: var(--button-color);
+    color: var(--color-text-button);
 }
