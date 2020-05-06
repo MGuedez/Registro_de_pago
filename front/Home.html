@@ -8,19 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container"> 
-        <div class="text_block">
-            <h1 class="title">Bienvenidos</h1>
-            <p class="subtitle">Gracias por ingresar al Sistema de Registro de Pago</p>
-        </div>
-        <form action="">
-            <h2 class="title_form">Registro de Datos</h2>
-            <label>Nombre<input type="text" name="name"></label>
-            <label>Nº de Documento<input type="number" name="document"></label>
-            <label>Nº de Piso<input type="number" name="floor"></label>
-            <label>Departamento<input type="text" name="department"></label>
-            <label>Nº de Referencia Bancaria<input type="number" name="reference"></label>
-            <input type="submit">
+    <div class="container_logo_text">
+        <img src="clap.jpg" alt="logo" class="logo">
+        <h1 class="title">Registro de Pago</h1>
+        <p class="subtitle">Bienvenido/a al Sistema de Registro de Pago, por favor ingrese los datos solicitados.</p>
+    </div>
+    <div class="container_form">
+        <form action="" class="form_block">
+            <label class="label">Nombre<input type="text" name="name" class="form_box"></label>
+            <label class="label">Nº de Documento<input type="number" name="document" class="form_box"></label>
+            <label class="label">Nº de Piso<input type="number" name="floor" class="form_box"></label>
+            <label class="label">Departamento<input type="text" name="department" class="form_box"></label>
+            <label class="label">Nº de Referencia Bancaria<input type="number" name="reference" class="form_box"></label>
+            <input type="submit" class="button_form">
         </form>
     </div>
 </body>
