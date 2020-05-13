@@ -101,3 +101,56 @@ body{
     color: var(--color-text-button);
     box-shadow: 2px 2px 6px rgba(0,0,0, 0.5);
 }
+
+/* styles responsive */
+@media screen and (min-width:768px){
+body{
+    grid-template-rows: 3fr 5fr;
+}
+
+/* seccion logo and text block */
+.logo{
+    width: 100px;
+}
+
+.title{
+    font-size: 3.5em;
+}
+
+.subtitle{
+    font-size: 1.8em;
+}
+
+/* section form */
+
+.container_form{
+    width: 90vw;
+    height: 67vh;
+    margin: auto;
+}
+
+.form_box{
+    height: 50px;
+    border-width: 1.5px;
+}
+
+.label{
+    font-size: 1.7em;
+    margin: 0 60px 25px;
+}
+
+.label:first-child{
+    margin-top: 40px;
+}
+
+.button_form{
+    width: 200px;
+    height: 55px;
+    margin: 20px auto 0;
+    border-radius: 35px;
+    font-size: 2em;
+}
+
+}
+
+
