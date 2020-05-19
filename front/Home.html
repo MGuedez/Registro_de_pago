@@ -5,22 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Fomts -->
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <div class="container_logo_text">
-        <img src="clap.jpg" alt="logo" class="logo">
-        <h1 class="title">Registro de Pago</h1>
-        <p class="subtitle">Bienvenido/a al Sistema de Registro de Pago, por favor ingrese los datos solicitados.</p>
-    </div>
-    <div class="container_form">
-        <form action="" class="form_block">
-            <label class="label">Nombre<input type="text" name="name" class="form_box"></label>
-            <label class="label">Nº de Documento<input type="number" name="document" class="form_box"></label>
-            <label class="label">Nº de Piso<input type="number" name="floor" class="form_box"></label>
-            <label class="label">Departamento<input type="text" name="department" class="form_box"></label>
-            <label class="label">Nº de Referencia Bancaria<input type="number" name="reference" class="form_box"></label>
-            <input type="submit" class="button_form">
+    <div class="container">
+        <img src="image/clap.png" alt="logotipo de la pagina" class="logo">
+        <p class="welcome-text">Bienvenido/a al Sistema de Registro de Pago, por favor ingrese los datos solicitados.</p>
+        <form action="" class="form-block">
+            <h2 class="subtitle">Registro de pago</h2>
+
+            <label>Nombre</label>
+            <input type="text" name="name" placeholder="Ingrese su Nombre">
+
+            <label>Nº de Documento</label>
+            <input type="number" name="document" placeholder="Ingrese su Nº de Documento">
+    
+            <label class="label-floor">Nº de Piso</label>
+            <input type="number" name="floor" class="input-floor">
+
+            <label class="label-depto">Departamento</label>
+            <input type="text" name="department" class="input-depto"depto>
+
+            <label>Nº de Referencia Bancaria</label>
+            <input type="number" name="reference" placeholder="Ingrese el Nº de Referencia Bancaria">
+    
+            <input type="submit" value="Enviar" class="button"></input>
         </form>
     </div>
 </body>

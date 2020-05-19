@@ -1,103 +1,137 @@
 :root{
-    --main-block-color: #f3f7ee;
-    --color-block-form: linear-gradient(#FDC830, #ea5b0c);
-    --color-text: #a9b4b0;
-    --color-text-form: #f3f7ee;
-    --button-color: #f3f7ee;
-    --color-text-button: #ea5b0c;
+    --main-text-color: #888;
+    --secondary-text-color: #5d5d5d;
+    --button-text-color: #f6f6f6;
+    --placeholder-color:#a9b4b0;
+    --button-color: linear-gradient(#FDC830, #ea5b0c);
 
-    --main-title-size: 3em;
-    --secondary-text-size: 13px;
-    --text-weight:300;
-    --font-title:'Fjalla One', sans-serif;
-    --font-text: 'Open Sans', sans-serif;
+    --main-font:'Quicksand', sans-serif;
+    --secundary-font:'Dosis', sans-serif;
 }
 
-/* general styles */
+/* Estilos Generales */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Estilos de los contenedores */
 body{
     width: 100vw;
     height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1.5fr 3fr;
-    font-family: var(--font-text);
-    font-size: var(--secondary-text-size);
-    font-weight: var(--text-weight);
-    color: var(--color-text-form);
-    background-image: var(--main-block-color);
-}
-
-
-/* seccion logo and text block */
-.container_logo_text{
-    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    margin: auto;
+    
+    background-image: url(image/fondo.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: 2em;
+
+}
+
+.container >*{
+    grid-column: 1 / 3;
+}
+
+/* Estilos del logo y texto principal */
 .logo{
-    width: 80px;
-    margin-bottom: 2em;
+    width: 130px;
+    padding-top: 1.5em;
+    justify-self: center;
 }
 
-.title, .subtitle{
-    color: var(--color-text);
-    text-align: center;
+.welcome-text{
+    display: none;
 }
 
-.title{
-    font-family: 'Fjalla One', sans-serif;
-    font-size: 2em;
-    letter-spacing: 3px;
-    margin-bottom: 10px;
-    color: #343b39;
+/* Estilos del formulario */
+.form-block{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: .7em;
 }
 
-/* section form */
-.container_form{
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    background-image: var(--color-block-form);
+.subtitle{
+    font-size: 1.4em;
+    font-family: var(--main-font);
+    justify-self: center;
+
+    color: var(--secondary-text-color);    
 }
 
-.form_block{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+label{
+    font-size: 1.2em;
+    padding-left: 2em;
+    font-family: var(--secundary-font);
+    font-weight: 500;
+
+    color: var(--main-text-color);
 }
 
-.form_box{
-    width: 100%;
-    height: 30px;
-    border-width: .8px;
-    background-color: transparent;
-    border-color: transparent transparent #f3f7ee;
+.form-block >*{
+    grid-column: 1 / 3;
 }
 
-.label{
-    margin: 0 30px 15px;
+.label-floor{
+    grid-column: 1 / 2 ;
+    grid-row: 6 / 7;
 }
 
-.label:first-child{
-    margin-top: 30px;
+.input-floor{
+    width: 60%;
+    grid-column: 1 / 2 ;
+    grid-row: 7 / 8;
+}
+    
+.label-depto{
+    grid-column: 2 / 3 ;
+    grid-row: 6 / 7;
 }
 
-.button_form{
-    width: 115px;
-    height: 35px;
-    margin: 12px auto 0;
+.input-depto{
+     width: 60%;
+    grid-column: 2 / 3 ;
+    grid-row: 7 / 8;
+}
+
+input{
+    width: 80%;
+    height: 2.3em;
+    padding-left: 1em;
+    font-size: 1em;
+    font-family: var(--secundary-font);
+    font-weight: 500;
+    justify-self: center;
+    border-radius: 1.5em;
+    outline: none;
+
+    border: .5px solid #eee;
+    box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+    color: var(--main-text-color);
+}
+
+::placeholder{
+    font-size: 1em;
+    color: var(--placeholder-color);
+}
+
+.button{
+    width: 130px;
+    height: 2.3em;
+    margin-top: 1em;
+    padding-left: 0;
+    font-family: var(--main-font);
+    font-weight: 700;
     border: none;
-    border-radius: 20px;
-    background-color: var(--button-color);
-    color: var(--color-text-button);
-    box-shadow: 2px 2px 6px rgba(0,0,0, 0.5);
+    
+    background-image: var(--button-color);
+    color: var(--button-text-color);
 }
