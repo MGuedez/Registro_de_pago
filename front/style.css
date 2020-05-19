@@ -1,23 +1,23 @@
-:root{
+:root {
     --main-text-color: #888;
     --secondary-text-color: #5d5d5d;
     --button-text-color: #f6f6f6;
     --placeholder-color:#a9b4b0;
     --button-color: linear-gradient(#FDC830, #ea5b0c);
-
+    
     --main-font:'Quicksand', sans-serif;
     --secundary-font:'Dosis', sans-serif;
 }
 
 /* Estilos Generales */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 /* Estilos de los contenedores */
-body{
+body {
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -30,89 +30,87 @@ body{
     background-attachment: fixed;
 }
 
-.container{
+.container {
+    margin: 0 40px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 2em;
-
 }
 
-.container >*{
+.container >* {
     grid-column: 1 / 3;
 }
 
 /* Estilos del logo y texto principal */
-.logo{
+.logo {
     width: 130px;
     padding-top: 1.5em;
     justify-self: center;
 }
 
-.welcome-text{
+.welcome-text {
     display: none;
 }
 
 /* Estilos del formulario */
-.form-block{
+.form-block {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: .7em;
 }
 
-.subtitle{
+.subtitle {
     font-size: 1.4em;
     font-family: var(--main-font);
     justify-self: center;
-
+    
     color: var(--secondary-text-color);    
 }
 
-label{
+label {
     font-size: 1.2em;
-    padding-left: 2em;
     font-family: var(--secundary-font);
     font-weight: 500;
-
+    
     color: var(--main-text-color);
 }
 
-.form-block >*{
+.form-block >* {
     grid-column: 1 / 3;
 }
 
-.label-floor{
+.label-floor {
     grid-column: 1 / 2 ;
     grid-row: 6 / 7;
 }
 
-.input-floor{
-    width: 60%;
-    grid-column: 1 / 2 ;
-    grid-row: 7 / 8;
-}
-    
-.label-depto{
-    grid-column: 2 / 3 ;
-    grid-row: 6 / 7;
-}
-
-.input-depto{
-     width: 60%;
-    grid-column: 2 / 3 ;
-    grid-row: 7 / 8;
-}
-
-input{
+.input-floor {
     width: 80%;
+    grid-column: 1 / 2 ;
+    grid-row: 7 / 8;
+}
+
+.label-depto {
+    grid-column: 2 / 3 ;
+    grid-row: 6 / 7;
+}
+
+.input-depto {
+    width: 100%;
+    grid-column: 2 / 3 ;
+    grid-row: 7 / 8;
+}
+
+input {
+    width: 100%;
     height: 2.3em;
     padding-left: 1em;
     font-size: 1em;
     font-family: var(--secundary-font);
     font-weight: 500;
-    justify-self: center;
     border-radius: 1.5em;
     outline: none;
-
+    
     border: .5px solid #eee;
     box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
     color: var(--main-text-color);
@@ -123,15 +121,54 @@ input{
     color: var(--placeholder-color);
 }
 
-.button{
+.button {
     width: 130px;
-    height: 2.3em;
-    margin-top: 1em;
+    height: 35px;
+    margin-top: .8em;
     padding-left: 0;
+    justify-self: center;
     font-family: var(--main-font);
     font-weight: 700;
     border: none;
     
     background-image: var(--button-color);
     color: var(--button-text-color);
+}
+
+/* Responsive table */
+@media screen and (min-width: 768px) {
+
+    /* Estilos de los contenedores */
+    .container {
+        margin: 0 85px;
+    }
+    
+    /* Estilos del logo y texto principal */
+    .logo {
+        width: 220px;
+        padding-top: 3em;
+    }
+    
+    /* Estilos del formulario */
+    .subtitle {
+        font-size: 2.2em;
+        margin-bottom: 15px;
+    }
+    
+    label,
+    input{
+        font-size: 1.7em;
+    }
+    
+    input {
+        height: 2.5em;
+        padding-left: 1.5em;
+    }
+
+    .button {
+        width: 260px;
+        height: 70px;
+        margin-top: 1.5em;
+    }
+
 }
