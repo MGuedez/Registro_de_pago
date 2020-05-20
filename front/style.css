@@ -1,12 +1,12 @@
 :root {
     --main-text-color: #888;
-    --secondary-text-color: #5d5d5d;
+    --form-text-color: #aaa;
     --button-text-color: #f6f6f6;
-    --placeholder-color:#a9b4b0;
+    --placeholder-color:#c3c3c3;
     --button-color: linear-gradient(#FDC830, #ea5b0c);
     
-    --main-font:'Quicksand', sans-serif;
-    --secundary-font:'Dosis', sans-serif;
+    --main-font:'Balsamiq Sans', cursive;
+    --secundary-font:'Roboto', sans-serif;
 }
 
 /* Estilos Generales */
@@ -62,23 +62,24 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: .5em;
+    grid-column-gap: 1em;
 }
 
 .subtitle {
-    font-size: 1.5em;
+    font-size: 1.3em;
     font-family: var(--main-font);
     font-weight: 400;
     justify-self: center;
     
-    color: var(--secondary-text-color);    
+    color: var(--main-text-color);    
 }
 
 label {
     font-size: 1em;
     font-family: var(--secundary-font);
-    font-weight: 500;
+    font-weight: 400;
     
-    color: var(--main-text-color);
+    color: var(--form-text-color);
 }
 
 .form-block >* {
@@ -91,7 +92,6 @@ label {
 }
 
 .input-floor {
-    width: 80%;
     grid-column: 1 / 2 ;
     grid-row: 7 / 8;
 }
@@ -102,7 +102,6 @@ label {
 }
 
 .input-depto {
-    width: 100%;
     grid-column: 2 / 3 ;
     grid-row: 7 / 8;
 }
@@ -113,13 +112,13 @@ input {
     padding-left: 1em;
     font-size: 1em;
     font-family: var(--secundary-font);
-    font-weight: 500;
+    font-weight: 400;
     border-radius: 1.5em;
     outline: none;
     
     border: .5px solid #eee;
     box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
-    color: var(--main-text-color);
+    color: var(--form-text-color);
 }
 
 ::placeholder{
@@ -128,13 +127,13 @@ input {
 }
 
 .button {
-    width: 115px;
-    height: 35px;
+    width: 100px;
+    height: 30px;
     margin: .6em 0;
     padding-left: 0;
     justify-self: center;
+    font-size: .8em;
     font-family: var(--main-font);
-    /* font-weight: 700; */
     border: none;
     
     background-image: var(--button-color);
@@ -151,19 +150,26 @@ input {
     }
     
     /* Estilos del formulario */
+    .subtitle {
+        padding-top: 1em;
+        font-size: 1.8em; 
+    }
+
     label,
     input{
         font-size: 1.5em;
     }
     
     input {
+        height: 2.4em;
         padding-left: 1.5em;
     }
 
     .button {
-        width: 200px;
-        height: 55px;
+        width: 155px;
+        height: 50px;
         margin: 1.2em 0;
+        font-size: 1.2em;
     }
 
 }
@@ -177,7 +183,8 @@ input {
     }
 
     .container {
-        grid-template-columns: .7fr 1fr;
+        width: 60vw;
+        grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 0;
     }
 
@@ -188,51 +195,46 @@ input {
     }
 
     .logo {
-        width: 140px;
+        width: 120px;
         padding-top: 0;
     }
     
     .welcome-text {
         display: block;
         padding: 30px 40px 0 0;
-        text-align: center;
-        font-size: 1.3em;
+        font-size: 1.1em;
         font-family: var(--secundary-font);
-        font-weight: 500;
+        line-height: 20px;
 
         color: var(--main-text-color);
     }
 
     /* Estilos del formulario */
     .form-block {
-        grid-template-columns: .5fr 1fr;
+        grid-template-columns: repeat(2, .5fr);
         grid-column: 2 / 4;
         grid-row-gap: .7em;
     }
 
     .subtitle{
+        font-size: 1.5em;
         margin-bottom: 10px;
         justify-self: start;
     }
     label,
     input{
-        font-size: 1.3em;
+        font-size: 1.1em;
     }
 
     input{
-        height: 1.8em;
-        width: 80%;
-    }
-
-    .input-floor,
-    .input-depto {
-        width: 70%;
+        height: 2.2em;
     }
 
     .button {
-        width: 150px;
-        height: 40px;
+        width: 140px;
+        height: 37px;
         margin: .8em 0;
+        font-size: 1.1em;
     }
 
 
