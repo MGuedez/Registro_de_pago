@@ -6,7 +6,8 @@
     --button-color: linear-gradient(#FDC830, #ea5b0c);
     
     --main-font:'Balsamiq Sans', cursive;
-    --secundary-font:'Roboto', sans-serif;
+    --form-font:'Roboto', sans-serif;
+    --font-text:'Archivo Black', sans-serif;
 }
 
 /* Estilos Generales */
@@ -53,7 +54,8 @@ body {
     padding-top: 1.5em;
 }
 
-.welcome-text {
+.welcome-text,
+.description-text {
     display: none;
 }
 
@@ -61,7 +63,7 @@ body {
 .form-block {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: .5em;
+    grid-row-gap: .7em;
     grid-column-gap: 1em;
 }
 
@@ -76,7 +78,7 @@ body {
 
 label {
     font-size: 1em;
-    font-family: var(--secundary-font);
+    font-family: var(--form-font);
     font-weight: 400;
     
     color: var(--form-text-color);
@@ -111,7 +113,7 @@ input {
     height: 2em;
     padding-left: 1em;
     font-size: 1em;
-    font-family: var(--secundary-font);
+    font-family: var(--form-font);
     font-weight: 400;
     border-radius: 1.5em;
     outline: none;
@@ -150,6 +152,10 @@ input {
     }
     
     /* Estilos del formulario */
+    .form-block {
+        grid-row-gap: 1.3em;
+    }
+
     .subtitle {
         padding-top: 1em;
         font-size: 1.8em; 
@@ -168,7 +174,7 @@ input {
     .button {
         width: 155px;
         height: 50px;
-        margin: 1.2em 0;
+        margin: 1em 0;
         font-size: 1.2em;
     }
 
@@ -184,27 +190,55 @@ input {
 
     .container {
         width: 60vw;
+        height: 80vh;
         grid-template-columns: repeat(2, 1fr);
         grid-row-gap: 0;
+        border-radius: 1em;
+
+        background-color: white;
+        border: .5px solid #aaa;
+        box-shadow: 0 0 20px 0 rgba(25, 25, 25, 0.8);
     }
 
     /* Estilos del logo y texto principal */
     .block-text-logo {
         grid-column: 1 / 2;
         align-self: center;
+        padding: 0 40px 30px;
+
+        border-right: 1px solid #aaa;
     }
 
     .logo {
-        width: 120px;
+        width: 150px;
         padding-top: 0;
+        margin-left: 25%;
+        margin-right: 25%;
+        margin-bottom: 30px;
     }
     
     .welcome-text {
         display: block;
-        padding: 30px 40px 0 0;
-        font-size: 1.1em;
-        font-family: var(--secundary-font);
-        line-height: 20px;
+        margin-bottom: 20px;
+        font-size: 2em;
+        font-family: var(--font-text);
+        text-transform: uppercase;
+        text-align: center;
+
+        color: var(--main-text-color);
+    }
+
+    span{
+        background-image: linear-gradient(to left, #FDC830, #ea5b0c);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .description-text{
+        display: block;
+        font-size: 1em;
+        font-family: var(--form-font);
+        font-weight: 300;
+        text-align: center;
 
         color: var(--main-text-color);
     }
@@ -214,13 +248,14 @@ input {
         grid-template-columns: repeat(2, .5fr);
         grid-column: 2 / 4;
         grid-row-gap: .7em;
+        margin: 40px 40px 30px;
     }
 
     .subtitle{
+        padding-top: 0;
         font-size: 1.5em;
-        margin-bottom: 10px;
-        justify-self: start;
     }
+
     label,
     input{
         font-size: 1.1em;
@@ -233,7 +268,7 @@ input {
     .button {
         width: 140px;
         height: 37px;
-        margin: .8em 0;
+        margin: .8em 0 0;
         font-size: 1.1em;
     }
 
