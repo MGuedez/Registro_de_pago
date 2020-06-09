@@ -37,7 +37,7 @@ body {
     margin-right: auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 20px;
+    grid-row-gap: 17px;
 }
 
 .logo,
@@ -66,12 +66,8 @@ body {
     font-family: var(--font-text);
     text-transform: uppercase;
     text-align: center;
+    line-height: 37px;
 
-    color: var(--main-text-color);
-}
-
-span{
-    /* color: var(--main-text-color); */
     background-image: linear-gradient(to left, #FDC830, #ea5b0c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -104,6 +100,46 @@ span{
     box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
 }
 
+/* Responsive table */
+@media screen and (min-width: 768px) {
+
+/* Estilos de los contenedores */
+.container {
+    grid-row-gap: 30px;
+    padding: 25px 45px;
+    border-radius: 1em;
+
+    background-color: white;
+    border: none;
+    box-shadow: 0 3px 10px 0 rgba(55, 55, 55, 0.5);
+}
+
+/* Estilos del logo */
+.logo {
+    width: 160px;
+}
+
+/* Estilos de los textos*/
+.welcome-text {
+    font-size: 2.5em;
+    line-height: 45px;
+}
+
+.description-text{
+    font-size: 1.5em;
+}
+
+/* Estilos de los botones*/
+.register-button,
+.query-button {
+    width: 165px;
+    height: 40px;
+    font-size: 1.2em;
+    border-radius: 1.5em;
+}
+
+
+}
 
 
 
