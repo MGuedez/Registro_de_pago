@@ -42,7 +42,8 @@ body {
 
 .logo,
 .welcome-text,
-.description-text {
+.description-text,
+.descriptionQuery-text {
     grid-column: 1 / 3;
 }
 
@@ -66,14 +67,14 @@ body {
     font-family: var(--font-text);
     text-transform: uppercase;
     text-align: center;
-    line-height: 37px;
 
     background-image: linear-gradient(to left, #FDC830, #ea5b0c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.description-text{
+.description-text,
+.descriptionQuery-text{
     font-size: 1em;
     font-family: var(--form-font);
     font-weight: 300;
@@ -103,43 +104,83 @@ body {
 /* Responsive table */
 @media screen and (min-width: 768px) {
 
-/* Estilos de los contenedores */
-.container {
-    grid-row-gap: 30px;
-    padding: 25px 45px;
-    border-radius: 1em;
+    /* Estilos de los contenedores */
+    .container {
+        grid-row-gap: 30px;
+        padding: 25px 45px;
+        border-radius: 1em;
 
-    background-color: white;
-    border: none;
-    box-shadow: 0 3px 10px 0 rgba(55, 55, 55, 0.5);
-}
+        background-color: white;
+        border: none;
+        box-shadow: 0 3px 10px 0 rgba(55, 55, 55, 0.5);
+    }
 
-/* Estilos del logo */
-.logo {
-    width: 160px;
-}
+    /* Estilos del logo */
+    .logo {
+        width: 150px;
+    }
 
-/* Estilos de los textos*/
-.welcome-text {
-    font-size: 2.5em;
-    line-height: 45px;
-}
-
-.description-text{
-    font-size: 1.5em;
-}
-
-/* Estilos de los botones*/
-.register-button,
-.query-button {
-    width: 165px;
-    height: 40px;
-    font-size: 1.2em;
-    border-radius: 1.5em;
-}
-
+    /* Estilos de los botones*/
+    .register-button,
+    .query-button {
+        width: 165px;
+        height: 40px;
+        font-size: 1.2em;
+        border-radius: 1.5em;
+    }
 
 }
 
+/* Responsive Desktop */
+@media screen and (min-width: 1024px) {
 
+    /* Estilos de los contenedores */
+    body {
+        background-image: url(image/background-desktop.png);
+    }
 
+    .container {
+        width: 50vw;
+        height: 60vh;
+        grid-column-gap: 45px;
+    }
+
+    .container >* {
+        align-self: center;
+    }
+
+    /* Estilos del logo*/
+    .logo {
+        grid-column: 1 / 3;
+    }
+        
+    /* Estilos de los textos */
+    .welcome-text {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+    .description-text{
+        grid-column: 1 / 2;
+    }
+    .descriptionQuery-text{
+        grid-column: 2 / 3;
+    }
+
+    /* Estilos de los botones*/
+    .register-button{
+        grid-column: 1 / 2;
+    }
+
+    .query-button {
+        grid-column: 2 / 3;
+    }
+
+    .register-button,
+    .query-button {
+        width: 140px;
+        height: 37px;
+        margin: .8em 0 0;
+        font-size: 1em;
+    }
+}
