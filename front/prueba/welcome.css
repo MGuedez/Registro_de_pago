@@ -1,0 +1,320 @@
+:root {
+    --main-text-color: #888;
+    --form-text-color: #aaa;
+    --button-text-color: #f6f6f6;
+    --placeholder-color:#c3c3c3;
+    --button-color: linear-gradient(#FDC830, #ea5b0c);
+    
+    --main-font:'Balsamiq Sans', cursive;
+    --form-font:'Roboto', sans-serif;
+    --font-text:'Archivo Black', sans-serif;
+}
+
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos de los contenedores */
+.hero {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+
+    background-image: url(image/background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.form-box {
+    width: 380px;
+    height: 480px ;
+    position: relative;
+    margin: 6% auto;
+    padding: 5px;
+    overflow: hidden;
+
+    background-color: #fff;
+    box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+}
+
+.button-box {
+    width: 220px;
+    margin: 25px auto;
+    position: relative;
+    border-radius: 30px;
+    
+    box-shadow: 0 0 20px 9px #eee;
+}
+
+.toggle-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    border-radius: 30px;
+    transition: .5s;
+
+    background-image: var(--button-color);    
+}
+
+.form-block {
+    top: 90px;
+    position: absolute;
+    width: 280px;
+    transition: .5s;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    font-family: var(--main-font);
+    font-weight: 400;
+    justify-self: center;
+    
+    color: var(--main-text-color);    
+}
+
+label {
+    font-size: 1em;
+   
+    font-family: var(--form-font);
+    font-weight: 400;
+    
+    color: var(--form-text-color);
+}
+
+input {
+    width: 100%;
+    height: 2em;
+    margin-bottom: 10px;
+    padding-left: 1em;
+    font-size: 1em;
+    font-family: var(--form-font);
+    font-weight: 400;
+    border-radius: 1.5em;
+    outline: none;
+    
+    border: .5px solid #eee;
+    box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+    color: var(--form-text-color);
+}
+
+::placeholder{
+    font-size: 1em;
+    color: var(--placeholder-color);
+}
+
+.button {
+    width: 122px;
+    height: 35px;
+    margin: .6em 0;
+    padding-left: 0;
+    justify-self: center;
+    font-size: .9em;
+    font-family: var(--main-font);
+    border: none;
+    
+    background-image: var(--button-color);
+    color: var(--button-text-color);
+}
+
+#register {
+    left: 50px;
+}
+
+#query {
+    left: 450px;
+}
+
+/* body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    background-image: url(image/background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+} */
+
+/* .container {
+    width: 80vw;
+    height: 90vh;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr 1fr;
+} */
+
+/* .text-box {
+    display: grid;
+    grid-template-rows: 30px 55px 60px;
+    grid-row-gap: 15px;
+} */
+
+/* Estilos text box */
+/* Estilos del logo */
+/* .logo{
+    width: 100px;
+    grid-row: 1 / 2;
+} */
+
+/* Estilos del texto */
+/* .tittle {
+    font-size: 1.3em;
+    font-family: var(--font-text);
+    text-transform: uppercase;
+    text-align: center;
+    grid-row: 2 / 3;
+
+    background-image: linear-gradient(to left, #FDC830, #ea5b0c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+/* .description-text {
+    display: none;
+} */
+
+/* Estilos de botones de login */
+/* .button-box {
+    position: relative;
+    grid-row: 3 / 4;
+    justify-self: center;
+    align-self: center;
+    width: 245px;
+    height: 36px;
+    border-radius: 30px;
+
+    border: .5px solid #eee;
+    box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+} */
+
+/* .toggle-btn {
+    padding: 9px 30px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    position: relative;
+
+    background-color: transparent;
+}
+
+#btn {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 122.5px;
+    height: 100%;
+    border-radius: 30px;
+    transition: 5s;
+    
+    background-image: var(--button-color);
+} */
+
+/* Estilos de los formularios */
+/* Estilos formulario registro*/
+/* .form-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-row-gap: .7em;
+    grid-column-gap: 1em;
+    transition: 5s;
+}
+
+.subtitle {
+    font-size: 1.3em;
+    font-family: var(--main-font);
+    font-weight: 400;
+    justify-self: center;
+    
+    color: var(--main-text-color);    
+}
+
+label {
+    font-size: 1em;
+    font-family: var(--form-font);
+    font-weight: 400;
+    
+    color: var(--form-text-color);
+}
+
+.form-block >* {
+    grid-column: 1 / 3;
+}
+
+.label-floor {
+    grid-column: 1 / 2 ;
+    grid-row: 6 / 7;
+}
+
+.input-floor {
+    grid-column: 1 / 2 ;
+    grid-row: 7 / 8;
+}
+
+.label-depto {
+    grid-column: 2 / 3 ;
+    grid-row: 6 / 7;
+}
+
+.input-depto {
+    grid-column: 2 / 3 ;
+    grid-row: 7 / 8;
+}
+
+input {
+    width: 100%;
+    height: 2em;
+    padding-left: 1em;
+    font-size: 1em;
+    font-family: var(--form-font);
+    font-weight: 400;
+    border-radius: 1.5em;
+    outline: none;
+    
+    border: .5px solid #eee;
+    box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+    color: var(--form-text-color);
+}
+
+::placeholder{
+    font-size: 1em;
+    color: var(--placeholder-color);
+}
+
+.button {
+    width: 122px;
+    height: 35px;
+    margin: .6em 0;
+    padding-left: 0;
+    justify-self: center;
+    font-size: .9em;
+    font-family: var(--main-font);
+    border: none;
+    
+    background-image: var(--button-color);
+    color: var(--button-text-color);
+} */
+
+/* Estilos formulario consulta*/
+/* #query {
+    display: none;
+} */

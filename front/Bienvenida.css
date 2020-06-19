@@ -7,7 +7,7 @@
     
     --main-font:'Balsamiq Sans', cursive;
     --form-font:'Roboto', sans-serif;
-    --font-text:'Archivo Black', sans-serif;
+    --tittle-text:'Alatsi', sans-serif;
 }
 
 /* Estilos Generales */
@@ -25,7 +25,7 @@ body {
     flex-direction: column;
     justify-content: center;
     
-    background-image: url(image/background-mobile.png);
+    background-image: url(image/background-mobile3..png);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;
@@ -33,39 +33,30 @@ body {
 
 .container {
     width: 70vw;
+    height: 55vh;
     margin-left: auto;
     margin-right: auto;
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-row-gap: 17px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
 }
 
-.logo,
-.welcome-text,
-.description-text,
-.descriptionQuery-text {
-    grid-column: 1 / 3;
-}
-
-.register-button {
-    grid-column: 1 / 2;
-}
-
-.query-button {
-    grid-column: 2 / 3;
+.container >* {
+  grid-column: 1 / 2;  
 }
 
 /* Estilos del logo*/
 .logo {
-    width: 130px;
+    width: 170px;
     justify-self: center;
 }
 
 /* Estilos de los textos*/
 .welcome-text {
-    font-size: 2em;
-    font-family: var(--font-text);
-    text-transform: uppercase;
+    font-size: 1.2em;
+    font-family: var(--tittle-text);
+    /* text-transform: uppercase; */
     text-align: center;
 
     background-image: linear-gradient(to left, #FDC830, #ea5b0c);
@@ -86,19 +77,23 @@ body {
 /* Estilos de los botones*/
 .register-button,
 .query-button {
-    width: 100px;
-    height: 30px;
+    width: 180px;
+    height: 35px;
     margin: .6em 0;
     padding-left: 0;
-    justify-self: center;
-    font-size: .8em;
+    font-size: 1em;
     font-family: var(--main-font);
     border: none;
-    border-radius: 1.5em;
+    border-radius:.5em;
 
     background-image: var(--button-color);
     color: var(--button-text-color);
     box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+}
+
+/* toDo: al eliminar los enlaces la propiedad de css justify-self: center, debe coclocarse en los botones para centarlos */
+.links {
+    justify-self: center;
 }
 
 /* Responsive table */
