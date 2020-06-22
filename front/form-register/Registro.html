@@ -22,22 +22,38 @@
             <h2 class="subtitle">Registro de pago</h2>
 
             <label>Nombre</label>
-            <input type="text" name="name" placeholder="Ingrese su Nombre">
+            <input type="text" name="name" placeholder="Ingrese su Nombre" required>
 
             <label>Nº de Documento</label>
-            <input type="number" name="document" placeholder="Ingrese su Nº de Documento">
+            <input type="number" name="document" placeholder="Ingrese su Nº de Documento" required>
     
             <label class="label-floor">Nº de Piso</label>
-            <input type="number" name="floor" class="input-floor">
+            <input type="number" name="floor" class="input-floor" required>
 
             <label class="label-depto">Apto.</label>
-            <input type="text" name="department" class="input-depto"depto>
+            <input type="text" name="department" class="input-depto"depto required>
 
             <label>Nº de Referencia Bancaria</label>
-            <input type="number" name="reference" placeholder="Ingrese el Nº de Referencia">
+            <input type="number" name="reference" placeholder="Ingrese el Nº de Referencia" required>
     
-            <input type="submit" value="Enviar" class="button"></input>
+            <!-- <input type="submit" value="Enviar" id="button" onclick="enviar(this)"></input> -->
+
+            <button type="submit"id="button" onclick="enviar(this)">Registrar</button>
         </form>
     </div>
+    <script>
+        function enviar(ref) {
+            console.log(ref);
+            ref.classList.add("enviado");
+            ref.innerHTML= "&#10004"
+            // ref.onclick=null;
+
+            setTimeout(() => {
+                alert("gracias");
+                ref.classList.remove("enviado");
+                ref.innerHTML= "Registrar"
+            }, 300);
+        }
+    </script>
 </body>
 </html>
