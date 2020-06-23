@@ -4,6 +4,7 @@
     --button-text-color: #f6f6f6;
     --placeholder-color:#c3c3c3;
     --button-color: linear-gradient(#FDC830, #ea5b0c);
+    --button-color-check: linear-gradient(#5be470, #23d83f);
     
     --main-font:'Balsamiq Sans', cursive;
     --form-font:'Roboto', sans-serif;
@@ -154,20 +155,64 @@ input {
     justify-self: center;
     border: none;
     border-radius:.5em;
+    transition: all .7s ease;
 
     color: var(--button-text-color);
     background-image: var(--button-color);
     box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
 }
 
-#button.enviado {
+
+#button.click {
+    font-size: 0;
     width: 40px;
     height: 40px;
-    border-radius: 40px;
-    line-height: 40px;
+    border-radius: 50px;
+    transition: all 300ms ease;
+    
+}
+
+#button.enviando {
+    font-size: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    animation: rotate 1.4s ease .5s infinite;
+    
+    background: transparent;
+    border: 3px solid #FDC830;
+    border-left-color: transparent;
+    box-shadow: none;
+}
+
+@keyframes rotate {
+    0%{
+        transform: rotate(360deg);
+    }
+}
+
+#button.enviado {
     font-size: 20px;
-    transition: all 200ms ease;
-    background: green;
+    width: 40px;
+    height: 40px;
+    border: 0;
+    border-radius: 50px;
+    box-shadow: none;
+    animation: check .3s ease-in;
+
+    background-image: var(--button-color-check);
+}
+
+@keyframes check {
+    0%{
+        transform: scale(0.9);
+    }
+}
+
+#button.enviado::before {
+    content: "";
+    position: absolute;
+    font-size: 20px;
 }
 
 /* Responsive table */

@@ -38,21 +38,25 @@
     
             <!-- <input type="submit" value="Enviar" id="button" onclick="enviar(this)"></input> -->
 
-            <button type="submit"id="button" onclick="enviar(this)">Registrar</button>
+            <button type="submit" id="button" onclick="registrar(this)">Registrar</button>
         </form>
     </div>
     <script>
-        function enviar(ref) {
+        function registrar(ref) {
             console.log(ref);
-            ref.classList.add("enviado");
-            ref.innerHTML= "&#10004"
+            ref.classList.add("click");
             // ref.onclick=null;
 
             setTimeout(() => {
-                alert("gracias");
-                ref.classList.remove("enviado");
-                ref.innerHTML= "Registrar"
-            }, 300);
+                ref.classList.remove("click");
+                ref.classList.add("enviando");
+            }, 350);
+       
+            setTimeout(() => {
+                ref.classList.remove("enviando");
+                ref.classList.add("enviado");
+                ref.innerHTML= "&#10004"
+            }, 5000); 
         }
     </script>
 </body>
