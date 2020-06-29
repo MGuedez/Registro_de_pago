@@ -11,7 +11,16 @@
 
 </head>
 
-<body >
+<body>
+    <!-- <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content-modal">
+            <img src="../image/check.svg" alt="icono de alerta" class="icon-alert">
+            <h2>Gracias por registrar tu pago</h2>
+            <p>El proceso se realizó con exito</p>
+            <a href="#" class="links"><button type="button" class="closet-btn">cerrar</button></a>
+        </div>
+    </di> -->
     <a href="../Bienvenida.html" class="links"><button type="button" class="button-back"><img src="../image/icon-back.svg" alt="icono regresar" class="icon-back"></button></a>
     <div class="container">
         <div class="block-logo">  
@@ -36,28 +45,10 @@
             <label>Nº de Referencia Bancaria</label>
             <input type="number" name="reference" placeholder="Ingrese el Nº de Referencia" required>
     
-            <!-- <input type="submit" value="Enviar" id="button" onclick="enviar(this)"></input> -->
-
             <button type="submit" id="button" onclick="registrar(this)">Registrar</button>
         </form>
     </div>
-    <script>
-        function registrar(ref) {
-            console.log(ref);
-            ref.classList.add("click");
-            // ref.onclick=null;
 
-            setTimeout(() => {
-                ref.classList.remove("click");
-                ref.classList.add("enviando");
-            }, 350);
-       
-            setTimeout(() => {
-                ref.classList.remove("enviando");
-                ref.classList.add("enviado");
-                ref.innerHTML= "&#10004"
-            }, 5000); 
-        }
-    </script>
+    <script src="registry.js"></script>
 </body>
 </html>

@@ -3,6 +3,7 @@
     --form-text-color: #aaa;
     --button-text-color: #f6f6f6;
     --placeholder-color:#c3c3c3;
+    --modal-color: #fff;
     --button-color: linear-gradient(#FDC830, #ea5b0c);
     --button-color-check: linear-gradient(#5be470, #23d83f);
     
@@ -169,6 +170,7 @@ input {
     height: 40px;
     border-radius: 50px;
     transition: all 300ms ease;
+    color: transparent;
     
 }
 
@@ -214,6 +216,71 @@ input {
     position: absolute;
     font-size: 20px;
 }
+
+/* Estilos del modal */
+/* .popup .overlay{
+    display: none;
+}
+
+.popup .content-modal {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    padding: 50% 15px;
+    z-index: 2;
+    text-align: center;
+    display: none;
+
+    background: var(--modal-color);
+}
+
+.popup.active .content-modal {
+    transition: all 300ms ease-in-out;
+    display: block;
+}
+
+.icon-alert {
+    width: 100px;
+}
+
+.content-modal h2 {
+    font-size: 23px;
+    font-family: var(--main-font);
+
+    color: var(--main-text-color);
+}
+
+.content-modal p{
+    font-size: 20px;
+    font-family: var(--form-font);
+    font-weight: 400;
+
+    color: var(--form-text-color);
+}
+
+.links {
+    text-decoration: none;
+}
+
+.closet-btn {
+    width: 180px;
+    height: 35px;
+    margin: .6em 0;
+    font-size: 1em;
+    font-family: var(--main-font);
+    border: none;
+    cursor: pointer;
+
+    color: #fff;
+    background-color: #00AF80;
+}
+
+.closet-btn,
+.content-modal h2 {
+    margin-top: 30px;
+} */
+
 
 /* Responsive table */
 @media screen and (min-width: 768px) {
