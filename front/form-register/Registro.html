@@ -11,7 +11,16 @@
 
 </head>
 
-<body >
+<body>
+    <!-- <div class="popup" id="popup-1">
+        <div class="overlay"></div>
+        <div class="content-modal">
+            <img src="../image/check.svg" alt="icono de alerta" class="icon-alert">
+            <h2>Gracias por registrar tu pago</h2>
+            <p>El proceso se realizó con exito</p>
+            <a href="#" class="links"><button type="button" class="closet-btn">cerrar</button></a>
+        </div>
+    </di> -->
     <a href="../Bienvenida.html" class="links"><button type="button" class="button-back"><img src="../image/icon-back.svg" alt="icono regresar" class="icon-back"></button></a>
     <div class="container">
         <img src="../image/clap2.png" alt="logotipo de la pagina" class="logo">
@@ -33,27 +42,12 @@
 
             <label>Nº de Referencia Bancaria</label>
             <input type="number" name="reference" placeholder="Ingrese el Nº de Referencia" required>
-    
-            <!-- <input type="submit" value="Enviar" id="button" onclick="enviar(this)"></input> -->
-
-            <button type="submit"id="button" onclick="enviar(this)">Registrar</button>
 
             <a href="../Bienvenida.html" class="link-return"><button type="button" class="button-return">Volver</button></a>
+            <button type="submit" id="button" onclick="registrar(this)">Registrar</button>
         </form>
     </div>
-    <script>
-        function enviar(ref) {
-            console.log(ref);
-            ref.classList.add("enviado");
-            ref.innerHTML= "&#10004"
-            // ref.onclick=null;
 
-            setTimeout(() => {
-                alert("gracias");
-                ref.classList.remove("enviado");
-                ref.innerHTML= "Registrar"
-            }, 300);
-        }
-    </script>
+    <script src="registry.js"></script>
 </body>
 </html>
