@@ -1,9 +1,7 @@
 function registrar(ref) {
     console.log(ref);
-
-    
     ref.classList.add("click");
-    // ref.onclick=null;
+    ref.onclick=null;
 
     setTimeout(() => {
         ref.classList.remove("click");
@@ -14,7 +12,5 @@ function registrar(ref) {
         ref.classList.remove("enviando");
         ref.classList.add("enviado");
         ref.innerHTML= "&#10004";
-        let popup_id = document.getElementById("popup-1");
-        popup_id.classList.add("");
     }, 5000); 
 }
