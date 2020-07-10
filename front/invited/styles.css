@@ -136,7 +136,7 @@ body {
     align-self: center;
 }
 
-.form-elements .name{
+.form-elements .name {
     grid-column: 1 / 3;
     grid-row: 2 / 3;
 }
@@ -181,12 +181,12 @@ body {
 .form-element > input {
     width: 100%;
     height: 2em;
-    padding-left: .8em;
+    padding-left: 1.8em;
     margin-top: 4px;
     font-size: 1em;
     font-family: var(--font);
     font-weight: 300;
-    border-radius:.5em;
+    /* border-radius:.5em; */
     outline: none;
     
     border: .5px solid #eee;
@@ -195,6 +195,24 @@ body {
 }
 
 ::placeholder{
+    color: var(--placeholder-color);
+}
+
+.form-element {
+    position: relative;
+}
+
+.form-element .fas {
+    position: absolute;
+    top: 31px;
+    left: 7px;
+}
+
+.form-element .fa-user,
+.fa-at,
+.fa-id-card,
+.fa-building,
+.fa-money-check-alt {
     color: var(--placeholder-color);
 }
 
