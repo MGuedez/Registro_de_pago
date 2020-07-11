@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="welcome.css"> -->
+    <!-- Fomts -->
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alatsi&display=swap" rel="stylesheet">
+    <style>
+      :root {
+    --main-text-color: #888;
+    --form-text-color: #aaa;
+    --button-text-color: #f6f6f6;
+    --placeholder-color:#c3c3c3;
+    --button-color: linear-gradient(#FDC830, #ea5b0c);
+    
+    --main-font:'Balsamiq Sans', cursive;
+    --form-font:'Roboto', sans-serif;
+    --tittle-text:'Alatsi', sans-serif;
+}
+
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos de los contenedores */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    background-image: url(assets/background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+.container {
+    width: 70vw;
+    height: 65vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-description {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 20px;
+}
+.container-description >* {
+  grid-column: 1 / 2;  
+}
+
+.container-form {
+    display: none;
+}
+
+/* Estilos del logo*/
+.logo {
+    width: 170px;
+    justify-self: center;
+}
+
+/* Estilos de los textos*/
+.welcome-text {
+    font-size: 1.2em;
+    font-family: var(--tittle-text);
+    /* text-transform: uppercase; */
+    text-align: center;
+
+    background-image: linear-gradient(to left, #FDC830, #ea5b0c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.description-text,
+.descriptionQuery-text{
+    font-size: 1em;
+    font-family: var(--form-font);
+    font-weight: 300;
+    text-align: center;
+
+    color: var(--main-text-color);
+}
+
+/* Estilos de los botones*/
+.register-button,
+.query-button {
+    width: 180px;
+    height: 35px;
+    margin: .6em 0;
+    padding-left: 0;
+    font-size: 1em;
+    font-family: var(--main-font);
+    border: none;
+    border-radius:.5em;
+
+    background-image: var(--button-color);
+    color: var(--button-text-color);
+    box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+}
+
+/* toDo: al eliminar los enlaces la propiedad de css justify-self: center, debe coclocarse en los botones para centarlos */
+.link-register,
+.link-query {
+    justify-self: center;
+}
+
+/* Responsive table */
+@media screen and (min-width: 768px) {
+
+    /* Estilos de los contenedores */
+    body {  
+        background-image: url(assets/background-tablet.png);
+    }
+
+    .container {
+        height: 47vh;
+        border-radius: .5em;
+
+        background-color: white;
+        border: none;
+        box-shadow: 0 3px 10px 0 rgba(55, 55, 55, 0.5);
+    }
+
+    .container-description {
+        padding: 25px 45px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 100px repeat(4, 60px);
+        
+    }
+    .logo,
+    .welcome-text,
+    .description-text,
+    .descriptionQuery-text {
+        grid-column: 1 / 3;
+    }
+
+    .register-button,
+    .link-register {
+        grid-column: 1 / 2;
+    }
+
+    .query-button,
+    .link-query {
+        grid-column: 2 / 3;
+    }
+
+
+    /* Estilos del logo */
+    .logo {
+        width: 190px;
+        align-self: center;
+    }
+
+    /* Estilos de los textos */
+    .welcome-text {
+        font-size: 1.4em;
+        text-transform: uppercase;
+    }
+    
+    .description-text,
+    .descriptionQuery-text {
+        font-size: 1.2em;
+    }
+
+    /* Estilos de los botones*/
+    .register-button,
+    .query-button {
+        width: 190px;
+        height: 40px;
+        font-size: 1.2em;
+        margin-top: 15px;
+    }
+
+}
+
+/* Responsive Desktop */
+@media screen and (min-width: 1024px) {
+
+    /* Estilos de los contenedores */
+    body {
+        background-image: url(assets/background-desktop.png);
+    }
+
+    .container {
+        width: 70vw;
+        height: 92vh;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-column-gap: 0;
+    }
+
+    .container-description {
+        grid-template-columns: 1fr;
+        grid-template-rows: 140px 80px repeat(2, 70px);
+        grid-column-gap: 0;
+        padding: 25px 40px;
+        border-right: 2px solid #eee;
+    }
+
+    /* Estilos de container description */
+    /* Estilos del logo */
+    .logo {
+        width: 110px;
+        justify-self: flex-start;
+        align-self: flex-start;
+    }
+
+    /* Estilos de los textos */
+    .welcome-text {
+        font-size: 1.6em;
+    }
+
+    .link-query,
+    .register-button,
+    .link-query,
+    .query-button {
+        display: none;
+    }
+
+    /* Estilos de los formularios */
+    /* Estilos de los contenedores */
+    .container-form {
+        display: block;
+        padding: 25px 40px;
+    }
+    
+    .form-header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+    }
+
+    .form-header > button {
+        width: 100px;
+        height: 35px;
+        font-size: 1.2em;
+        font-family: var(--main-font);
+        cursor: pointer;
+        border: none;
+        border-radius: .5em;
+
+        color: var(--form-text-color);
+        background-color: #fff;
+    }
+
+    .container-form.register .form-header .show-register {
+        color: var(--button-text-color);
+        background-image: var(--button-color);
+        box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+    }
+
+    .container-form.query .form-header .show-query {
+        color: var(--button-text-color);
+        background-image: var(--button-color);
+        box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+    }
+
+    .container-form.query .form-block label:nth-child(2),
+    .container-form.query .form-block .label-floor,
+    .container-form.query .form-block .label-depto,
+    .container-form.query .form-block input:nth-child(3),
+    .container-form.query .form-block .input-floor,
+    .container-form.query .form-block .input-depto {
+        display: none;
+    }
+
+
+    /* Estilos del formulario */
+.form-block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1em;
+}
+
+.subtitle {
+    font-size: 1.4em;
+    font-family: var(--main-font);
+    text-align: center;
+
+    background-image: linear-gradient(to left, #FDC830, #ea5b0c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+label {
+    font-size: 1.2em;
+    font-family: var(--form-font);
+    font-weight: 400;
+    
+    color: var(--form-text-color);
+}
+
+.form-block >* {
+    grid-column: 1 / 3;
+}
+
+.label-floor {
+    grid-column: 1 / 2 ;
+    grid-row: 6 / 7;
+}
+
+.input-floor {
+    grid-column: 1 / 2 ;
+    grid-row: 7 / 8;
+}
+
+.label-depto {
+    grid-column: 2 / 3 ;
+    grid-row: 6 / 7;
+}
+
+.input-depto {
+    grid-column: 2 / 3 ;
+    grid-row: 7 / 8;
+}
+
+input {
+    width: 100%;
+    height: 2.4em;
+    padding-left: 1.5em;
+    font-size: 1em;
+    font-family: var(--form-font);
+    font-weight: 400;
+    border-radius:.5em;
+    outline: none;
+    
+    border: .5px solid #eee;
+    box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+    color: var(--form-text-color);
+}
+
+::placeholder{
+    font-size: 1.2em;
+    color: var(--placeholder-color);
+}
+
+#button {
+    grid-column: 1 / 3;
+    width: 190px;
+    height: 40px;
+    font-size: 1.2em;
+    margin-top: 0;
+    font-family: var(--main-font);
+    justify-self: center;
+    border: none;
+    border-radius:.5em;
+    transition: all .7s ease;
+
+    color: var(--button-text-color);
+    background-image: var(--button-color);
+    box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+}
+
+.button-return {
+    display: none;
+}
+
+
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container-description">
+            <img src="assets/clap.png" alt="logotipo de la pagina" class="logo">
+            <p class="welcome-text">Bienvenidos al sistema de registro y verificación de pago</p>
+            <p class="description-text">Registrar tu pago nos permitirá tener un control y garantizar una mejor gestion de entrega.</p>
+            <p class="descriptionQuery-text">Una vez registrado tu pago, podrás hacerle seguimiento al proceso de verificación haciendo click en el botón consultar.</p>   
+            <a href="form-register/register.html" class="link-register"><button type="button" class="register-button">Registrar</button></a>
+            <a href="form-query/query.html" class="link-query"><button type="button" class="query-button">Consultar</button></a>   
+        </div>
+        <div class="container-form register">
+            <div class="form-header">
+                <button type="button" class="show-register">Registrar</button>
+                <button type="button" class="show-query">Consultar</button>
+            </div>
+            <form action="" class="form-block">
+                <h2 class="subtitle">Formulario de registro</h2>
+
+                <label>Nombre</label>
+                <input type="text" name="name" placeholder="Ingrese su Nombre" required>
+
+                <label>Nº de Documento</label>
+                <input type="number" name="document" placeholder="Ingrese su Nº de Documento" required>
+
+                <label class="label-floor">Nº de Piso</label>
+                <input type="number" name="floor" class="input-floor" required>
+
+                <label class="label-depto">Apto.</label>
+                <input type="text" name="department" class="input-depto" required>
+
+                <label>Nº de Referencia Bancaria</label>
+                <input type="number" name="reference" placeholder="Ingrese el Nº de Referencia" required>
+
+                <!-- <a href="../welcome.html" class="link-return"><button type="button" class="button-return">Volver</button></a> -->
+                <button type="submit" id="button">Registrar</button>
+            </form>
+        </div>
+    </div>
+    <!-- <script src="welcome.js"></script> -->
+</body>    
+</html>
