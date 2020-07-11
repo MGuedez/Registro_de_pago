@@ -1,9 +1,7 @@
 var express = require('express');
 var router = express.Router(['strict']);
 
-
-
-router.get('/register', (req, res) => {
+router.post('/register', (req, res) => {
     console.log(JSON.stringify(req.body));
     // revisar en el dynamo si el usuario existe
 
