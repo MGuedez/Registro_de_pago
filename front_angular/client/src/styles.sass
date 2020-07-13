@@ -1,1 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
+:root
+    --main-text-color: #888
+    --form-text-color: #aaa
+    --button-text-color: #f6f6f6
+    --placeholder-color:#c3c3c3
+    --button-color: linear-gradient(#FDC830, #ea5b0c)
+    --main-font:'Balsamiq Sans', cursive
+    --form-font:'Roboto', sans-serif
+    --tittle-text:'Alatsi', sans-serif
+/* Estilos Generales */
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+/* Estilos de los contenedores */
+body
+    width: 100vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    justify-content: center
+    background-image: url('/assets/background-mobile.png')
+    background-repeat: no-repeat
+    background-size: 100% 100%
+    background-attachment: fixed
+
+/* Responsive table */
+@media screen and (min-width: 768px)
+    /* Estilos de los contenedores */
+    body
+        background-image: url('/assets/background-tablet.png')
+
+    /* Responsive Desktop */
+@media screen and (min-width: 1024px)
+
+    /* Estilos de los contenedores */
+    body
+        background-image: url('/assets/background-desktop.png')
