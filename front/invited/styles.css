@@ -8,7 +8,7 @@
     --font:'Roboto', sans-serif;
 }
 
-* {
+*, *::before, *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,6 +23,10 @@ body {
     font-weight: 300;
 
     color: var(--main-text-color);
+    background-image: url(../image/background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
 
 .container {
@@ -36,15 +40,9 @@ body {
         "form"
         "footer";
     grid-gap: .8rem;
-
-    background-color: #fff;
-    background-image: url(../image/background-mobile.png);
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
-    background-attachment: fixed;
 }
 
-/* Estilos del logotipo y titulo */
+/* Estilos del logotipo */
 .logotype {
     grid-area: logo;
     display: flex;
@@ -203,7 +201,7 @@ body {
     font-size: 1em;
     font-family: var(--font);
     font-weight: 300;
-    /* border-radius:.5em; */
+    border-radius:.5em;
     outline: none;
     
     border: .5px solid #eee;
@@ -213,6 +211,10 @@ body {
 
 ::placeholder{
     color: var(--placeholder-color);
+}
+
+.form-element {
+    position: relative;
 }
 
 .form-element .fas {
@@ -238,6 +240,7 @@ body {
     font-family: var(--font);
     font-weight: 400;
     border: none;
+    border-radius:.5em;
 
     color: var(--button-text-color);
     background-image: var(--button-color);
@@ -254,7 +257,26 @@ body {
     color: var(--footer-color);
 }
 
-/* @media only screen and (min-width: 768px){
+@media only screen and (min-width: 768px){
+/* contenedores */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../image/background-tablet.png);
+}
+
+.container {
+    min-height: 90vw;
+    border:1px solid #888;
+}
+    
+
+}
+
+/* @media only screen and (min-width: 1024px){
     .container {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: .2fr .2fr 2fr;
@@ -265,7 +287,3 @@ body {
     }
 
 } */
-
-@media only screen and (min-width: 1024px){
-    
-}
