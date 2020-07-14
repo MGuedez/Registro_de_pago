@@ -31,10 +31,9 @@ body {
 
 .container {
     min-height: 100vh;
-    /* padding: 1em 2em; */
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .3fr 2fr .2fr;
+    grid-template-rows: .35fr 2fr .12fr;
     grid-template-areas: 
         "logo"
         "form"
@@ -43,7 +42,7 @@ body {
     padding: 0 3em;
 }
 
-/* Estilos del logotipo */
+/* ------------Estilos del logotipo-------------- */
 .logotype {
     grid-area: logo;
     display: flex;
@@ -66,13 +65,12 @@ body {
     grid-area: form;
 }
 
-/* estilos de los tabs del formulario */
+/* -------------estilos de los tabs del formulario-------------- */
 .form-header {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #f6f6f6 ;
 }
 
 .form-header > button {
@@ -94,6 +92,7 @@ body {
 .form-box.register .show-register {
     font-size: .9em;
 
+    background-color: #fff;
     background-image: linear-gradient(to left, #FDC830, #ea5b0c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -101,21 +100,22 @@ body {
 }
 
 .form-box.query .show-query {
-    font-size: 1em;
+    font-size: .9em;
 
+    background-color: #fff;
     background-image: linear-gradient(to left, #FDC830, #ea5b0c);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     box-shadow: -4px -5px 5px -5px rgba(25, 25, 25, 0.5);
 }
 
-/* estilos del formulario de registro */
+/* --------------estilos del formulario de registro-------------- */
 .form-box .form-elements {
-    height: 100%;;
+    
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: .1fr repeat(6, .13fr);
-    grid-gap: .5em;
+    grid-template-rows: 2fr repeat(6, 3fr);
+    grid-gap: 1em;
 }
 
 .form-elements .subtitle {
@@ -125,7 +125,7 @@ body {
     font-size: 16px;
     font-weight: 400;
     text-align: center;
-    align-self: center;
+    align-self: flex-end;
 }
 
 .form-elements .name {
@@ -219,7 +219,7 @@ body {
     box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
 }
 
-/* Estilos del formulario de consulta */
+/*------------ Estilos del formulario de consulta-------------- */
 .form-box.query .form-element:nth-child(2),
 .form-box.query .form-element:nth-child(4),
 .form-box.query .form-element:nth-child(5),
@@ -228,7 +228,8 @@ body {
 }
 
 .form-box.query .form-elements {
-    grid-template-rows: .05fr repeat(3, .14fr);
+    grid-template-rows: 2fr repeat(6, 3fr);
+    grid-gap: 1em;
 }
 
 .form-box.query .form-elements .document {
@@ -248,6 +249,92 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: .8em;
 
     color: var(--footer-color);
+}
+
+/* ---------------Responsive Tablet---------------- */
+@media only screen and (min-width: 768px){
+    body {
+        font-size: 1.2em;
+
+        background-image: url(../image/background-tablet.png);
+    }
+
+    .container {
+        grid-template-rows: .5fr 2fr .2fr;
+        grid-gap: 1rem;
+        padding: 0 4em;
+    }
+
+    /* ------------Estilos del logotipo-------------- */
+    .logo {
+        width: 95px;
+    }
+
+    
+    /* -------------estilos de los tabs del formulario-------------- */
+    .form-box {
+        box-shadow: 0 10px 10px -3px rgba(55, 55, 55, 0.6);
+    }
+
+    .form-header > button {
+        height: 45px;
+        font-size: .8em;
+    }
+
+    .form-box.register .show-register {
+        box-shadow: -5px -6px 7px -5px rgba(25, 25, 25, 0.2);
+    }
+
+    .form-box.query .show-query {
+        box-shadow: 5px -6px 7px -5px rgba(25, 25, 25, 0.2);
+    }
+
+     /* --------------estilos del formulario de registro-------------- */
+     .form-box .form-elements {
+        grid-template-rows: repeat(7, 4fr);
+        grid-gap: 28px; 
+    }
+
+    .form-elements .subtitle {
+        font-size: 20px;
+    }
+
+    .form-element {
+        padding: 0 3em;
+    }
+
+    .form-element.depto {
+        padding-left: 0;
+    }
+
+    .form-element.depto .fas {
+        top: 36px;
+        left: 10px;
+    }
+
+    .form-element.floor {
+        padding-right: 0;
+    }
+
+    .form-element .fas {
+        top: 36px;
+        left: 66px;
+    }
+    
+    #button {
+        width: 250px;
+        height: 38px;
+        font-size: .9em;
+        margin-top: 1em;
+        border-bottom: none;
+    }
+
+    /*------------ Estilos del formulario de consulta-------------- */
+    .form-box.query .form-elements {
+        grid-template-rows: repeat(7, 4fr);
+        grid-gap: 28px;
+    }
 }
