@@ -7,66 +7,69 @@
     <link rel="stylesheet" href="styles.css">
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titan+One&display=swap" rel="stylesheet"> 
     <!-- icons -->
     <script src="https://kit.fontawesome.com/9b2f5039b7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class="container">
+    <section class="wrapper-grid">
         <header class="logotype">
             <img src="../image/clap.png" alt="logotipo" class="logo">
         </header>
-        <section class="information-text">
-            <span class="title">Registro y verificación de pago</span>
-            <p class="text">Registrar tu pago garantiza una mejor gestión de entrega.</p>
-        </section>
-        <section class="form-box register">
-            <div class="form-header">
-                <button type="button" class="show-register">Registrar</button>
-                <button type="button" class="show-query">Consultar</button>
+        <main class="form-container">
+            <div class="form-information register">
+                <span class="title">Verificación de pago</span>
+                <p class="text">Una vez registrado tu pago, podrás hacerle seguimiento al proceso de verificación en el formulario de consulta.</p>
             </div>
-            <form action="" class="form-elements">
-                <h2 class="subtitle">Formulario de Registro</h2>
-
-                <div class="form-element name">
-                    <label>Nombre</label>
-                    <i class="fas fa-user"></i>
-                    <input type="text" name="name" placeholder="Ingrese su Nombre" required>
+            <section class="form-box register">
+                <div class="form-header">
+                    <button type="button" class="show-register">Registrar</button>
+                    <button type="button" class="show-query">Consultar</button>
                 </div>
-
-                <div class="form-element document">
-                    <label>Nº de Documento</label>
-                    <i class="fas fa-id-card"></i>
-                    <input type="number" name="document" placeholder="Ingrese su Nº de Documento" required>
-                </div>
-
-                <div class="form-element email">
-                    <label>Correo</label>
-                    <i class="fas fa-at"></i>
-                    <input type="email" name="email" placeholder="Ingrese su correo" required>
-                </div>
-
-                <div class="form-element floor">
-                    <label class="label-floor">Nº de Piso</label>
-                    <i class="fas fa-building"></i>
-                    <input type="number" name="floor" class="input-floor" placeholder="Nº piso" required>
-                </div>
-
-                <div class="form-element depto">
-                    <label class="label-depto">Apto.</label>
-                    <i class="fas fa-building"></i>
-                    <input type="text" name="department" class="input-depto" placeholder="Nº apto." required>
-                </div>
-
-                <div class="form-element reference">
-                    <label>Nº de Referencia Bancaria</label>
-                    <i class="fas fa-money-check-alt"></i>
-                    <input type="number" name="reference" placeholder="Ingrese el Nº de Referencia" required>
-                </div>
+                <form action="" class="form-elements">
+                    <h2 class="subtitle">Formulario de registro</h2>
+    
+                    <div class="form-element name">
+                        <label>Nombre</label>
+                        <i class="fas fa-user"></i>
+                        <input type="text" name="name" placeholder="Ingrese su nombre" required>
+                    </div>
+    
+                    <div class="form-element document">
+                        <label>Nº de documento</label>
+                        <i class="fas fa-id-card"></i>
+                        <input type="number" name="document" placeholder="Ingrese su nº de documento" required>
+                    </div>
+    
+                    <div class="form-element email">
+                        <label>Correo</label>
+                        <i class="fas fa-at"></i>
+                        <input type="email" name="email" placeholder="Ingrese su correo" required>
+                    </div>
+    
+                    <div class="form-element floor">
+                        <label class="label-floor">Nº de piso</label>
+                        <i class="fas fa-building"></i>
+                        <input type="number" name="floor" class="input-floor" placeholder="Nº piso" required>
+                    </div>
+    
+                    <div class="form-element depto">
+                        <label class="label-depto">Apto.</label>
+                        <i class="fas fa-building"></i>
+                        <input type="text" name="department" class="input-depto" placeholder="Nº apto." required>
+                    </div>
+    
+                    <div class="form-element reference">
+                        <label>Nº de referencia bancaria</label>
+                        <i class="fas fa-money-check-alt"></i>
+                        <input type="number" name="reference" placeholder="Ingrese el nº de referencia" required>
+                    </div>
                     <button type="submit" id="button">Registrar</button>
-            </form>
-        </section>
+                </form>
+            </section>
+        </main>
         <footer class="footer">© 2020 All rights reserved</footer>
-    </div>
+    </section>
     <script src="buttonAnimation.js"></script>
 </body>
 </html>
