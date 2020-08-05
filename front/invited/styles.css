@@ -59,11 +59,6 @@ body {
     width: 80px;
 }
 
-/*---------- DESCRIPTION ----------*/
-.description {
-    display: none;
-}
-
 /* ------------FORM REGISTER-------------- */
 /** ------------container-------------- */
 .form {
@@ -71,7 +66,7 @@ body {
     display: grid;
     align-content: center;
     width: 100%;
-    height: 500px;
+    min-height: 100%;
     padding: 10px;    
 }
 
@@ -84,9 +79,14 @@ body {
     background-color: #fff;
 }
 
+/**---------- description ----------*/
+.description {
+    display: none;
+}
+
 /** -------------form header-------------- */
 .form .form-header {
-    width: 100%;
+    width: 80%;
     height: 50px;
     display: flex;
     align-items: center;
@@ -146,7 +146,7 @@ body {
 .form-element {
     position: relative;
     width: 100%;
-    height: 50px;
+    height: 60px;
     transition: all 500ms ease-in-out;
 }
 
@@ -172,7 +172,7 @@ body {
     position: relative;
     width: 100%;
     height: 2.2em;
-    font-size: 1em;
+    font-size: .9em;
     border-radius: .5em;
     transition: .5s ease-in-out;
 
@@ -189,7 +189,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    line-height: 35px;
+    line-height: 32px;
     transition: .5s ease;
 
     color: var(--input-text-color);
@@ -202,7 +202,7 @@ body {
 
 .input-box:focus + .form-label,
 .input-box:valid + .form-label {
-    top: -17px;
+    top: -16px;
     padding-left: 10px;
     font-size: .8em;
     color: var(--color-secundario);
@@ -256,3 +256,62 @@ body {
 }
 
 /*? ---------------TABLET---------------- */
+@media screen and (min-width: 600px) {
+    /**---------- Container ----------*/
+    .container {
+        background-image: url(../image/background-tablet.png);
+    }
+
+    .wrapper-grid {
+        width: 500px;
+        grid-template: 150px 1fr 65px / 1fr;
+        grid-template-areas: 
+            "header header"
+            "form form"
+            "footer footer";
+    }
+
+    /*---------- HEADER ----------*/
+    .logo {
+        width: 110px;
+    }
+
+    /* ------------FORM REGISTER-------------- */
+    /** -------------form header-------------- */
+    .form .form-header {
+        width: 60%;
+        height: 60px;
+    }
+
+    .form .form-header > div {
+        height: 30px;
+    }
+
+    /** --------------form elements-------------- */
+    .form-element {
+        height: 70px;
+    }
+
+    .form-element:nth-child(2) {
+        padding-top: 18px;
+    }
+
+    .input-box {
+        height: 2.4em;
+        font-size: 1em;
+
+        box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+    }
+
+    .form-label {
+        line-height: 38px;
+    }
+    
+    .input-box:focus + .form-label,
+    .input-box:valid + .form-label {
+        top: -19px;
+        font-size: .9em;
+    }
+
+
+}
