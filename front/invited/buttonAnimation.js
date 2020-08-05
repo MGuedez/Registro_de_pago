@@ -6,16 +6,16 @@ function resetClass(element, classname) {
 document.getElementsByClassName("show-register")
 [0].addEventListener("click", function(){
     console.log("hola");
-    let form = document.getElementsByClassName("form-box")[0];
+    let form = document.getElementsByClassName("form")[0];
     resetClass(form, "query");
     form.classList.add("register");
-    document.getElementById("button").innerText = "Registrar"
+    document.getElementById("submit-btn").innerText = "Registrar"
     document.getElementsByClassName("subtitle")[0].innerText = "Formulario de registro"
 });
 
 document.getElementsByClassName("show-register")
 [0].addEventListener("click", function(){
-    let text = document.getElementsByClassName("form-information")[0];
+    let text = document.getElementsByClassName("description")[0];
     resetClass(text, "query");
     text.classList.add("register");
     document.getElementsByClassName("title")[0].innerText = "Verificación de pago"
@@ -24,16 +24,16 @@ document.getElementsByClassName("show-register")
 
 document.getElementsByClassName("show-query")
 [0].addEventListener("click", function(){
-    let form = document.getElementsByClassName("form-box")[0];
+    let form = document.getElementsByClassName("form")[0];
     resetClass(form, "register");
     form.classList.add("query");
-    document.getElementById("button").innerText = "Consultar"
+    document.getElementById("submit-btn").innerText = "Consultar"
     document.getElementsByClassName("subtitle")[0].innerText = "Formulario de Consulta"
 });
 
 document.getElementsByClassName("show-query")
 [0].addEventListener("click", function(){
-    let text = document.getElementsByClassName("form-information")[0];
+    let text = document.getElementsByClassName("description")[0];
     resetClass(text, "register");
     text.classList.add("query");
     document.getElementsByClassName("title")[0].innerText = "Registro de pago"
