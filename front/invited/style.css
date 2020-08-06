@@ -20,3 +20,44 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+
+body {
+    font-family: var(--font);
+    font-size: 1em;
+    font-weight: 300;
+}
+
+/**-----MAIN CONTAINER-----*/
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template: 100px 1fr 30px / 1fr;
+    grid-template-areas: "background"
+                         "form"
+                         "footer";
+}
+
+/**-----PAGE BACKGROUND IMAGE-----*/
+.background-image {
+    grid-area: background;
+    background-color: #d4f5e8;
+}
+
+/**-----DESCRIPTIVE TEXT-----*/
+.text-description {
+    display: none;
+}
+
+/**-----FORM-----*/
+.form {
+    grid-area: form;
+    background-color: #4ad59e;
+}
+
+/**-----FOOTER-----*/
+.footer {
+    grid-area: footer;
+    background-color: #26a473;
+}
