@@ -42,7 +42,11 @@ body {
 /**-----PAGE BACKGROUND IMAGE-----*/
 .background-image {
     grid-area: background;
-    background-color: #d4f5e8;
+
+    background-image: url(../image/background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-attachment: fixed;
 }
 
 /**-----DESCRIPTIVE TEXT-----*/
