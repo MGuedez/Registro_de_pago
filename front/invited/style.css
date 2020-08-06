@@ -61,3 +61,30 @@ body {
     grid-area: footer;
     background-color: #26a473;
 }
+
+/*? ---------------TABLET---------------- */
+@media screen and (min-width: 600px) {
+    /**-----MAIN CONTAINER-----*/
+    .container {
+        grid-template: 1fr 30px / .5fr 1fr;
+        grid-template-areas:"background form"
+                            "background footer";
+    }
+}
+
+/*? ---------------DESKTOP---------------- */
+@media screen and (min-width: 1024px) {
+    /**-----MAIN CONTAINER-----*/
+    .container {
+        grid-template: 1fr 30px / .5fr .5fr 1fr;
+        grid-template-areas:"background text form"
+                            "background footer footer";
+    }
+
+    /**-----DESCRIPTIVE TEXT-----*/
+    .text-description {
+        grid-area: text;
+        display: block;
+        background-color: #8fe5c3;
+    }
+}
