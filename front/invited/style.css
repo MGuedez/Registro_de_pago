@@ -1,0 +1,22 @@
+:root {
+    --background-color: #ebe9eb;
+    --button-color: linear-gradient(#FDC830, #ea5b0c);
+    --unmarked-button-color: #f6f6f6;
+    --input-color: #f6f6f6;
+    --focus-input: #3a3e4b;
+
+    --title-color: #0b0c0e;
+    --text-color: #505668;
+    --unmarked-text-color: #505668;
+    --button-text-color: #f6f6f6;
+    --text-color-marked: linear-gradient(#FDC830, #ea5b0c);
+    
+    --font: 'Roboto', sans-serif;
+    --font-title:'Fredoka One', cursive;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
