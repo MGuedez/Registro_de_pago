@@ -33,7 +33,7 @@ body {
     width: 100vw;
     height: 100vh;
     display: grid;
-    grid-template: 100px 1fr 30px / 1fr;
+    grid-template: 120px 1fr 30px / 1fr;
     grid-template-areas: "background"
                          "form"
                          "footer";
@@ -42,11 +42,15 @@ body {
 /**-----PAGE BACKGROUND IMAGE-----*/
 .background-image {
     grid-area: background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-    background-image: url(../image/background-mobile.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-attachment: fixed;
+    background-color: #f9f9f9;
+}
+
+.logo {
+    width: 132px;
 }
 
 /**-----DESCRIPTIVE TEXT-----*/
@@ -74,13 +78,20 @@ body {
         grid-template-areas:"background form"
                             "background footer";
     }
+
+    /**-----PAGE BACKGROUND IMAGE-----*/
+    .logo {
+        width: 100%;
+    }
+
 }
+
 
 /*? ---------------DESKTOP---------------- */
 @media screen and (min-width: 1024px) {
     /**-----MAIN CONTAINER-----*/
     .container {
-        grid-template: 1fr 30px / .5fr .5fr 1fr;
+        grid-template: 1fr 30px / 260px .5fr 1fr;
         grid-template-areas:"background text form"
                             "background footer footer";
     }
