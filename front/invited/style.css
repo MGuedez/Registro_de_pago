@@ -3,7 +3,7 @@
     --unmarked-button-color: #eaebef;
     --button-color: #fff;
     --input-color: #f6f6f6;
-    --focus-input: #505668;
+    --focus-input: #909090;
     --button-submit: linear-gradient(#FDC830, #ea5b0c);
 
 
@@ -138,7 +138,7 @@ body {
     text-transform: uppercase;
     text-align: center;
 
-    color: var(--text-color);
+    color: var(--title-color);
 }
 
 /* ----- form elements ----- */
@@ -330,6 +330,8 @@ body {
     /**-----FORM-----*/
     .form-group {
         width: 65%;
+        grid-row-gap: 30px;
+
     }
     
 }
