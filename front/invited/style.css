@@ -217,6 +217,14 @@ body {
     box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
 }
 
+/*------------ FORM QUERY-------------- */
+.form.query .form-element:nth-child(3),
+.form.query .form-element:nth-child(5),
+.form.query .form-element:nth-child(6),
+.form.query .form-element:nth-child(7) {
+    display: none;
+}
+
 /**-----FOOTER-----*/
 .footer {
     grid-area: footer;
