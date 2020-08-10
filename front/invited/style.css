@@ -1,7 +1,8 @@
 :root {
     --background-color: #ebe9eb;
-    --button-color: linear-gradient(#FDC830, #ea5b0c);
-    --unmarked-button-color: #f6f6f6;
+    --button-color-focus: linear-gradient(#FDC830, #ea5b0c);
+    --unmarked-button-color: #eaebef;
+    --button-color: #fff;
     --input-color: #f6f6f6;
     --focus-input: #3a3e4b;
 
@@ -37,6 +38,8 @@ body {
     grid-template-areas: "background"
                          "form"
                          "footer";
+
+    background-color: #f9f9f9;
 }
 
 /**-----PAGE BACKGROUND IMAGE-----*/
@@ -45,8 +48,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: #f9f9f9;
 }
 
 .logo {
@@ -61,8 +62,73 @@ body {
 /**-----FORM-----*/
 .form {
     grid-area: form;
-    background-color: #4ad59e;
+    display: flex;
+    align-items: center;
+    
 }
+
+.form-group {
+    width: 100%;
+    display: grid;
+    grid-template: repeat(9, 1fr) / repeat(2, 1fr);
+    grid-gap: 10px;
+}
+
+.form-header,
+.subtitle,
+.input-name,
+.input-document,
+.input-email,
+.input-reference,
+.input-submit {
+    grid-column: 1 / 3;
+}
+
+/*-----form header----*/
+.form-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.form-header > button {
+    width: 90px;
+    height: 25px;
+    border-radius: .5em;
+    border: none;
+    cursor: pointer;
+
+    background-color: var(--unmarked-button-color);
+}
+
+.form-header button > span {
+    font-family: var(--font);
+    font-size: 1em;
+    font-weight: 500;
+
+    color: var(--unmarked-text-color);
+}
+
+.form.register .form-header button.show-register > span,
+.form.query .form-header button.show-query > span {
+    font-size: 1.2em;
+    font-weight: 700;
+    transition: all 500ms ease;
+    
+    background-image: linear-gradient(to left, #FDC830, #ea5b0c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.form.register .form-header button.show-register,
+.form.query .form-header button.show-query  {
+    width: 95px;
+    height: 28px;
+    
+    background-color: var(--button-color);
+    box-shadow: 3px 3px 10px -5px rgba(25, 25, 25, 0.2);
+}
+
 
 /**-----FOOTER-----*/
 .footer {
@@ -84,6 +150,9 @@ body {
         width: 100%;
     }
 
+    .form-header {
+        justify-content: space-between;
+    }
 }
 
 
