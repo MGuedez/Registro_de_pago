@@ -15,11 +15,11 @@ document.getElementsByClassName("show-register")
 
 document.getElementsByClassName("show-register")
 [0].addEventListener("click", function(){
-    let text = document.getElementsByClassName("description")[0];
+    let text = document.getElementsByClassName("text-description")[0];
     resetClass(text, "query");
     text.classList.add("register");
-    document.getElementsByClassName("title")[0].innerText = "Verificación de pago"
-    document.getElementsByClassName("text")[0].innerText = "Una vez registrado tu pago, podrás hacerle seguimiento al proceso de verificación en el formulario de consulta."
+    document.getElementsByClassName("description-title")[0].innerText = "Verificación de pago"
+    document.getElementsByClassName("description")[0].innerText = "Una vez registrado tu pago, podrás hacerle seguimiento al proceso de verificación en el formulario de consulta."
 });
 
 document.getElementsByClassName("show-query")
@@ -33,9 +33,9 @@ document.getElementsByClassName("show-query")
 
 document.getElementsByClassName("show-query")
 [0].addEventListener("click", function(){
-    let text = document.getElementsByClassName("description")[0];
+    let text = document.getElementsByClassName("text-description")[0];
     resetClass(text, "register");
     text.classList.add("query");
-    document.getElementsByClassName("title")[0].innerText = "Registro de pago"
-    document.getElementsByClassName("text")[0].innerText = "Registrar tu pago nos permitirá tener un control y garantizar una mejor gestion de entrega"
+    document.getElementsByClassName("description-title")[0].innerText = "Registro de pago"
+    document.getElementsByClassName("description")[0].innerText = "Registrar tu pago nos permitirá tener un control y garantizar una mejor gestion de entrega"
 });
