@@ -48,12 +48,17 @@ body {
 .background-image {
     grid-area: background;
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
+    padding-left: 30px;
+
+    background-image: url(../image/background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 120px;
 }
 
 .logo {
-    width: 132px;
+    width: 100px;
 }
 
 /**-----DESCRIPTIVE TEXT-----*/
@@ -245,8 +250,18 @@ body {
     }
 
     /**-----PAGE BACKGROUND IMAGE-----*/
+    .background-image {
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 50px;
+
+        background-image: url(../image/background.png);
+        background-size: 100% 100%;
+    }
+
     .logo {
-        width: 100%;
+        width: 150px;
     }
 
     /**-----FORM-----*/
@@ -296,6 +311,8 @@ body {
         grid-template: 1fr 30px / 260px .5fr 1fr;
         grid-template-areas:"background text form"
                             "background text footer";
+        
+        background-color: #fff;
     }
 
     /**-----DESCRIPTIVE TEXT-----*/
@@ -308,7 +325,7 @@ body {
         text-align: center;
         padding: 0 20px;
 
-        background-color: #fff;
+        background-color: #f9f9f9;
     }
 
     .description-title {
