@@ -29,19 +29,22 @@ body {
     font-family: var(--font);
     font-size: 1em;
     font-weight: 300;
+
+    background-color: #f9f9f9;
 }
 
 /**-----MAIN CONTAINER-----*/
 .container {
-    width: 100vw;
-    height: 100vh;
     display: grid;
-    grid-template: 120px 1fr 30px / 1fr;
+    grid-template: 100px 1fr 30px / 1fr;
     grid-template-areas: "background"
                          "form"
                          "footer";
+}
 
-    background-color: #f9f9f9;
+body .container {
+    width: 100vw;
+    height: 100vh;
 }
 
 /**-----PAGE BACKGROUND IMAGE-----*/
@@ -223,6 +226,10 @@ body {
 }
 
 /*------------ FORM QUERY-------------- */
+.form.query .form-group {
+    grid-template: repeat(5, 1fr) / repeat(2, 1fr);
+}
+
 .form.query .form-element:nth-child(3),
 .form.query .form-element:nth-child(5),
 .form.query .form-element:nth-child(6),
@@ -266,7 +273,7 @@ body {
 
     /**-----FORM-----*/
     .form-group {
-        width: 70%;
+        width: 80%;
         grid-column-gap: 25px;
         grid-row-gap: 35px;
     }
@@ -348,7 +355,6 @@ body {
     .form-group {
         width: 65%;
         grid-row-gap: 30px;
-
     }
     
 }
