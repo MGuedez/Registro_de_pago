@@ -69,7 +69,11 @@ body .container {
 /**-----FOOTER-----*/
 .footer {
     grid-area: footer;
-    background-color: #ff9d36;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--text-color);
 }
 
 /*? ---------------TABLET---------------- */
