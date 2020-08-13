@@ -63,8 +63,35 @@ body .container {
 /**-----FORM-----*/
 .login {
     grid-area: login;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     background-color: #ff8d14;
 }
+
+.form-group {
+    display: grid;
+    grid-template: repeat(4, 1fr) / 1fr;
+    grid-row-gap: 25px;
+}
+
+/*-----Text-----*/
+.text .welcom {
+    font-family: var(--font-title);
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 32px;
+
+    color: var(--title-color);
+}
+
+.text-signin {
+    font-size: 1em;
+    color: var(--text-color);
+}
+
 
 /**-----FOOTER-----*/
 .footer {
@@ -91,6 +118,19 @@ body .container {
 
     .logo {
         width: 150px;
+    }
+    /**-----FORM-----*/
+    /* .form-group {
+        grid-row-gap: 25px;
+    } */
+
+    /*-----Text-----*/
+    .text .welcom {
+        font-size: 2em;
+    }
+
+    .text-signin {
+        font-size: 1.2em;
     }
 
 }
