@@ -43,7 +43,7 @@ body {
 }
 
 body .container {
-    width: 100vw;
+    /* width: 100vw; */ /*MODIFICACION POR ISA */
     height: 100vh;
 }
 

@@ -28,19 +28,20 @@ body {
     font-family: var(--font);
     font-size: 1em;
     font-weight: 300;
-}
-
-body .container {
-    width: 100vw;
+    /* width: 100vw;*/ /*MODIFICACION POR ISA */
     height: 100vh;
 }
 
 .container {
+    width: 100%;
+    height: 100%;
     display: grid;
-    grid-template: 120px 1fr 30px / 1fr;
+    grid-template: 120px 1fr 50px / 1fr;
     grid-template-areas: "header"
                          "login"
                          "footer";
+    
+    background-color: #f9f9f9;
 }
 
 /**-----PAGE BACKGROUND IMAGE-----*/
@@ -179,6 +180,22 @@ body .container {
 
 /*? ---------------TABLET---------------- */
 @media screen and (min-width: 600px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        background-color: #f9f9f9;
+    }
+
+    .container {
+        width: 550px;
+        height: 550px;
+
+        box-shadow:  20px 20px 60px #d4d4d4, 
+                    -20px -20px 60px #ffffff;
+    }
+
     /**-----PAGE BACKGROUND IMAGE-----*/
     .background-image {
         align-items: flex-start;
@@ -193,9 +210,10 @@ body .container {
     .logo {
         width: 150px;
     }
+
     /**-----FORM-----*/
     .form-group {
-        width: 65%;
+        width: 70%;
         grid-row-gap: 32px;
     }
 
@@ -233,8 +251,11 @@ body .container {
 
 /*? ---------------DESKTOP---------------- */
 @media screen and (min-width: 1024px) {
+    .container {
+        width: 700px;
+    }
     /**-----FORM-----*/
     .form-group {
-        width: 40%;
+        width: 60%;
     }
 }
