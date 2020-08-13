@@ -66,14 +66,13 @@ body .container {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: #ff8d14;
 }
 
 .form-group {
+    width: 80%;
     display: grid;
-    grid-template: repeat(4, 1fr) / 1fr;
-    grid-row-gap: 25px;
+    grid-template: repeat(4, .5fr) / 1fr;
+    grid-row-gap: 26px;
 }
 
 /*-----Text-----*/
@@ -89,9 +88,84 @@ body .container {
 
 .text-signin {
     font-size: 1em;
+    padding-bottom: 15px;
+
     color: var(--text-color);
 }
 
+/* ----- form elements ----- */
+.form-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    transition: all 500ms ease-in-out;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 2.4em;
+    padding-left: 10px;
+    font-size: 1em;
+    border-radius: .5em;
+    transition: .5s ease-in-out;
+
+    color: var(--input-text-color);
+    border: 1px solid var(--input-color);
+    box-shadow: 9px 3px 10px -5px rgba(25, 25, 25, 0.2);
+}
+
+.input-box:focus {
+    border: 2px solid var(--focus-input);
+}
+
+.form-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 38px;
+    transition: .5s ease;
+
+    color: var(--placeholder-color);
+}
+
+.input-box,
+.form-label {
+    padding-left: 15px;
+}
+
+.input-box:focus + .form-label,
+.input-box:valid + .form-label {
+    top: -28px;
+    padding-left: 0;
+    font-size: .8em;
+    font-weight: 400;
+
+    color: var(--text-color);
+}
+
+.form-label > span {
+    transition: .5s ease-in-out;
+}
+
+.login-btn {
+    width: 200px;
+    padding: 8px 0;
+    font-family: var(--font);
+    font-size: 1em;
+    font-weight: 500;
+    border-radius: .5em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    color: var(--button-text-color);
+    background-image: var(--button-submit);
+    box-shadow: 10px 7px 10px -5px rgba(25, 25, 25, 0.2);
+}
 
 /**-----FOOTER-----*/
 .footer {
@@ -120,9 +194,10 @@ body .container {
         width: 150px;
     }
     /**-----FORM-----*/
-    /* .form-group {
-        grid-row-gap: 25px;
-    } */
+    .form-group {
+        width: 65%;
+        grid-row-gap: 32px;
+    }
 
     /*-----Text-----*/
     .text .welcom {
@@ -133,9 +208,33 @@ body .container {
         font-size: 1.2em;
     }
 
+    /* ----- form elements ----- */
+    .input-box {
+        height: 2.6em;
+        font-size: 1.1em;
+    }
+
+    .form-label {
+        line-height: 45px;
+    }
+
+    .input-box:focus + .form-label,
+    .input-box:valid + .form-label {
+        top: -32px;
+        font-size: 1em;
+    }
+
+    .login-btn {
+        width: 225px;
+        padding: 10px 0;
+        font-size: 1.1em;
+    }
 }
 
 /*? ---------------DESKTOP---------------- */
 @media screen and (min-width: 1024px) {
-    
+    /**-----FORM-----*/
+    .form-group {
+        width: 40%;
+    }
 }
