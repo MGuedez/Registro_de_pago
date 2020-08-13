@@ -37,7 +37,7 @@ body .container {
 
 .container {
     display: grid;
-    grid-template: 100px 1fr 30px / 1fr;
+    grid-template: 120px 1fr 30px / 1fr;
     grid-template-areas: "header"
                          "login"
                          "footer";
@@ -46,7 +46,18 @@ body .container {
 /**-----PAGE BACKGROUND IMAGE-----*/
 .background-img {
     grid-area: header;
-    background-color: #ffcf9c;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 30px;
+
+    background-image: url(../image/background-mobile.png);
+    background-repeat: no-repeat;
+    background-size: 100% 120px;
+}
+
+.logo {
+    width: 100px;
 }
 
 /**-----FORM-----*/
@@ -59,4 +70,28 @@ body .container {
 .footer {
     grid-area: footer;
     background-color: #ff9d36;
+}
+
+/*? ---------------TABLET---------------- */
+@media screen and (min-width: 600px) {
+    /**-----PAGE BACKGROUND IMAGE-----*/
+    .background-image {
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 50px;
+
+        background-image: url(../image/background.png);
+        background-size: 100% 100%;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+}
+
+/*? ---------------DESKTOP---------------- */
+@media screen and (min-width: 1024px) {
+    
 }
