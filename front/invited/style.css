@@ -43,7 +43,6 @@ body {
 }
 
 body .container {
-    /* width: 100vw; */ /*MODIFICACION POR ISA */
     height: 100vh;
 }
 
@@ -315,7 +314,7 @@ body .container {
 @media screen and (min-width: 1024px) {
     /**-----MAIN CONTAINER-----*/
     .container {
-        grid-template: 1fr 30px / 260px .5fr 1fr;
+        grid-template: 1fr 50px / 260px .5fr 1fr;
         grid-template-areas:"background text form"
                             "background text footer";
         

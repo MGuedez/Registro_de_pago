@@ -28,7 +28,6 @@ body {
     font-family: var(--font);
     font-size: 1em;
     font-weight: 300;
-    /* width: 100vw;*/ /*MODIFICACION POR ISA */
     height: 100vh;
 }
 
