@@ -3,68 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Registro de pago</title>
+    <link rel="stylesheet" href="css/style.css">
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <section class="container">
-        <section class="wrapper-grid">
-            <header class="header">
-                <img src="../image/clap.png" alt="logotipo" class="logo">
-            </header>
-             <div class="description register">
-                <span class="title">Verificación de pago</span>
-                <p class="text">Una vez registrado tu pago, podrás hacerle seguimiento al proceso de verificación en el formulario de consulta.</p>
-            </div>
-            <div class="form register">
-                <form action="" class="form-elements">
-                    <div class="form-header">
-                        <div class="show-register">Registrar</div>
-                        <div class="show-query">Consultar</div>
-                    </div>
-        
-                    <div class="form-element subtitle">
-                        <span>Formulario de registro</span>
-                    </div>
-        
-                    <div class="form-element">
-                        <input type="text" name="name" class="input-box" minlength="2" required>
-                        <label for="name" class="form-label"><span>Nombre</span></label>
-                    </div>
-        
-                    <div class="form-element">
-                        <input type="number" name="document" class="input-box" required>
-                        <label for="document" class="form-label"><span>Nº de documento</span></label>
-                    </div>
-        
-                    <div class="form-element">
-                        <input type="email" name="email" class="input-box" required>
-                        <label for="email" class="form-label"><span>Correo</span></label>
-                    </div>
-        
-                    <div class="form-element">
-                        <input type="number" name="floor" class="input-floor input-box" required>
-                        <label for="floor" class="form-label"><span>Piso</span></label>
-                    </div>
-        
-                    <div class="form-element">
-                        <input type="text" name="department" class="input-depto input-box" required>
-                        <label for="department" class="form-label"><span>Nº apto.</span></label>
-                    </div>
-        
-                    <div class="form-element">
-                        <input type="number" name="reference" class="input-box" required="required">
-                        <label for="reference" class="form-label"><span>Nº de referencia</span></label>
-                    </div>
+        <div class="background-image">
+            <img src="../image/clap.png" alt="" class="logo">
+        </div>
+        <div class="text-description">
+            <span class="description-title">Verificación de pago</span>
+                <p class="description">Una vez registrado tu pago, podrás hacerle seguimiento al proceso de verificación en el formulario de consulta.</p>
+        </div>
+        <div class="form register">
+            <form action="" class="form-group">
+                <div class="form-element form-header">
+                    <button class="show-register"><span>Registro</span></button>
+                    <button class="show-query"><span>Consulta</span></button>
+                </div>
+    
+                <div class="form-element subtitle">
+                    <span>Formulario de registro</span>
+                </div>
+    
+                <div class="form-element input-name">
+                    <input type="text" name="name" class="input-box" minlength="2" required>
+                    <label for="name" class="form-label"><span>Nombre</span></label>
+                </div>
+    
+                <div class="form-element input-document">
+                    <input type="number" name="document" class="input-box" required>
+                    <label for="document" class="form-label"><span>Nº de documento</span></label>
+                </div>
+    
+                <div class="form-element input-email">
+                    <input type="email" name="email" class="input-box" required>
+                    <label for="email" class="form-label"><span>Correo</span></label>
+                </div>
+    
+                <div class="form-element input-floor">
+                    <input type="number" name="floor" class="input-floor input-box" required>
+                    <label for="floor" class="form-label"><span>Piso</span></label>
+                </div>
+    
+                <div class="form-element input-depto">
+                    <input type="text" name="department" class="input-depto input-box" required>
+                    <label for="department" class="form-label"><span>Nº apto.</span></label>
+                </div>
+    
+                <div class="form-element input-reference">
+                    <input type="number" name="reference" class="input-box" required="required">
+                    <label for="reference" class="form-label"><span>Nº de referencia</span></label>
+                </div>
 
+                <div class="form-element input-submit">
                     <button type="submit" id="submit-btn">Registrar</button>
-                </form>
-            </div>
-            <footer class="footer">© 2020 All rights reserved</footer>
-        </section>
+                </div>
+            </form>
+        </div>
+        <footer class="footer">
+            © 2020 All rights reserved
+        </footer>
     </section>
-    <script src="buttonAnimation.js"></script>
+    <script src="js/buttonAnimation.js"></script>
 </body>
 </html>
