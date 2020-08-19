@@ -28,6 +28,11 @@ body {
     font-family: var(--font);
     font-size: 1em;
     font-weight: 300;
+    /* min-height: 100vh; /*comentar aca */
+    /* height: 100vh; */
+}
+
+.box {
     height: 100vh;
 }
 
@@ -183,10 +188,12 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-
+        min-height: 100vh;
         background-color: #f9f9f9;
     }
-
+    .box {
+        height: inherit;
+    }
     .container {
         width: 550px;
         height: 550px;
