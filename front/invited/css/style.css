@@ -43,7 +43,6 @@ body {
 }
 
 body .container {
-    width: 100vw;
     height: 100vh;
 }
 
@@ -55,7 +54,7 @@ body .container {
     align-items: center;
     padding-left: 30px;
 
-    background-image: url(../image/background-mobile.png);
+    background-image: url(../../image/background-mobile.png);
     background-repeat: no-repeat;
     background-size: 100% 120px;
 }
@@ -263,7 +262,7 @@ body .container {
         padding-left: 0;
         padding-top: 50px;
 
-        background-image: url(../image/background.png);
+        background-image: url(../../image/background.png);
         background-size: 100% 100%;
     }
 
@@ -315,7 +314,7 @@ body .container {
 @media screen and (min-width: 1024px) {
     /**-----MAIN CONTAINER-----*/
     .container {
-        grid-template: 1fr 30px / 260px .5fr 1fr;
+        grid-template: 1fr 50px / 260px .5fr 1fr;
         grid-template-areas:"background text form"
                             "background text footer";
         
